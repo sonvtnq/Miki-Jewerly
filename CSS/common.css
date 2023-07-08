@@ -361,8 +361,17 @@ li{
 }
 /* // `sm` applies to x-small devices (portrait phones, less than 425px) */
 @media  only screen and (max-width: 425.98px) { 
+    
     html,body{
         font-size: 14px;
+    }
+    .header,.footer{
+        width: 95%;
+    }
+    .search-focus{
+        .searchBar{
+            margin-top: 4rem !important;
+        }
     }
     .icon-search{
         right: 30%;
