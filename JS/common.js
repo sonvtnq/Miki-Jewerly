@@ -1,8 +1,10 @@
 function openSidebarMenu(){
     $("#sidebarMenu").addClass("append");
+    $('body').addClass('overflow-hide');    
 }
 function closeSidebarMenu(){
     $("#sidebarMenu").removeClass("append");
+    $('body').removeClass('overflow-hide');
 }
 
 function focusSearch(){

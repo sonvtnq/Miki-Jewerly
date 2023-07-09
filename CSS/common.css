@@ -9,7 +9,7 @@ html,body{
     color:#272727;
 }
 header,footer{
-    z-index: 2;
+    z-index: 2 ;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-top: 0;
@@ -256,6 +256,9 @@ li{
     width: 100vw;
     height: 100vh;
     z-index: 99;
+}
+.overflow-hide{
+    overflow: hidden;
 }
 .sidebar-search{
     padding-top: 3rem;
