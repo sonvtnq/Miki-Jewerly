@@ -1,0 +1,178 @@
+#zone1{
+    .banner-zone1 img{
+        transition: all 1s;
+    }
+    overflow: hidden;
+    &:hover img{
+        scale: 1.1;
+    }
+    z-index: 1;
+    .content-zone1{
+        position: absolute;
+        color: #fff;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .content-border{
+        border: 3px solid #fff;
+        border-left: none;
+        border-right: none;
+        padding: 1rem 5rem;
+        margin: 2rem 0;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .m-content-border{
+        border: 2px solid #fff;
+        border-left: none;
+        border-right: none;
+        padding: 1rem 3rem;
+        padding-left: 0;
+        text-align: start;
+        font-size: 1.5rem;
+        line-height: 250%;
+        >p{
+            display: inline-block;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) { 
+    
+}
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media only screen and (max-width: 1439.98px) {
+    
+}
+
+/* // `xl` applies to large devices (L laptop, less than 1240px) */
+@media  only screen and (max-width: 1239.98px) { 
+    #zone1 .content-zone1 {
+        >p{
+            font-size: 5rem !important;
+        }
+        .content-border{
+            border: 2px solid #fff;
+            border-left: none;
+            border-right: none;
+            >p{
+                font-size: 1.25rem;
+            }
+        }
+        .button{
+            margin-top: 2rem !important;
+        }
+    }
+}
+
+/* // `xl` applies to large devices (LapTop, less than 1064px) */
+@media  only screen and (max-width: 1063.98px) { 
+    #zone1 .content-zone1 {
+        >p{
+            font-size: 4rem !important;
+        }
+        .content-border{
+            border: 2px solid #fff;
+            border-left: none;
+            border-right: none;
+            >p{
+                font-size: 1.25rem;
+            }
+        }
+        .button{
+            margin-top: 2rem !important;
+        }
+    }
+}
+
+/* // `lg` applies to medium devices (S Laptop, less than 992px) */
+@media  only screen and (max-width: 991.98px) { 
+    #zone1 .content-zone1 {
+        >p{
+            font-size: 3.5rem !important;
+            margin-bottom: 2rem !important;
+        }
+        .content-border{
+            >p{
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}
+
+/* // `lg` applies to medium devices (tablets, less than 768px) */
+@media  only screen and (max-width: 767.98px) { 
+    #zone1{
+        .banner-zone1{
+            >.lap{
+                display: none !important;
+            }
+            >.phone{
+                display: block !important;
+            }
+        }
+        .content-zone1{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            left: 2rem !important;
+            top: 50% !important;
+            transform: translate(0,-50%) !important;
+            >p{
+                font-size: 4.5rem !important;
+                text-align: start !important;
+            }
+            >.content-border{
+                display: none !important;
+            }
+            >.m-content-border{
+                display: inline-block !important;
+                margin: 4rem 0;
+            }
+        }
+    }
+}
+
+/* // `sm` applies to x-small devices (L phones, less than 576px) */
+@media  only screen and (max-width: 575.98px) { 
+    #zone1{
+        .content-zone1{
+            >p{
+                font-size: 3.5rem !important;
+            }
+            >.m-content-border{
+                margin: 2rem 0;
+                >p{
+                    font-size: 1.25rem !important;
+                }
+            }
+        }
+        
+    }
+}
+/* // `sm` applies to x-small devices (portrait phones, less than 425px) */
+@media  only screen and (max-width: 425.98px) { 
+    #zone1{
+        .content-zone1{
+            >p{
+                font-size: 3rem !important;
+            }
+            >.m-content-border{
+                margin: 1rem 0;
+                >p{
+                    font-size: 1.25rem !important;
+                }
+            }
+        }
+        
+    }
+}
+/* // `sm` applies to x-small devices (small phones, less than 375px) */
+@media  only screen and (max-width: 375.98px) { 
+    
+}

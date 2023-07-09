@@ -1,1 +1,0 @@
-window.location.href = './View/home-page.html';
