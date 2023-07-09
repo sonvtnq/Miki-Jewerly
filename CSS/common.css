@@ -6,6 +6,17 @@ html,body{
     font-size: 16px;
     background-color: #fff9f6;
     font-family: 'Montserrat';
+    color:#272727;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 img{
     width: 100%;
@@ -19,9 +30,26 @@ img{
         font-weight: 700;
     }
 }
+.w-330px{
+    width: 330px;
+}
+.w-410px{
+    width: 410px;
+}
 .font-size-h1{
     font-size: 2.5rem;
     line-height: 1.2;
+}
+.font-size-h2{
+    font-size: 2rem;
+    line-height: 1.2;
+    padding-bottom: .5rem;
+}
+.font-w700{
+    font-weight: 700 !important;
+}
+.mt-120px{
+    margin-top: 120px !important;
 }
 .w-80{
     width: 80%;
@@ -43,6 +71,18 @@ img{
 }
 .w-12px{
     width: 12px;
+}
+.w-55{
+    width: 55%;
+}
+.w-60{
+    width: 60%;
+}
+.w-16px{
+    width: 16px;
+}
+.h-120px{
+    height: 120px !important;
 }
 .h-40px{
     height: 40px !important;
@@ -86,6 +126,15 @@ a{
 
 .p-0-16px{
     padding: 0px 16px;
+}
+.p-8px{
+    padding: 8px;
+}
+.pt-1rem{
+    padding-top: 1rem;
+}
+.ml-35px{
+    margin-left: 35px;
 }
 input[type='text']{
     border: 1px solid #272727;
@@ -154,6 +203,10 @@ li{
 .tool{
     right: 0;
     bottom: 0;
+}
+.input-email{
+    border: 1px solid #6E5544;
+    border-radius: 8px;
 }
 .sidebar-menu{
     width: 300px;
@@ -233,10 +286,41 @@ li{
     top: 50% !important;
     transform: translate(50%,-50%) !important;
 }
+.font-size-3rem{
+    font-size: 3rem;
+}
+.font-size-1-25{
+    font-size: 1.25rem;
+}
+input{
+    background-color: #fff9f6;
+}
+.icon-muitenphai{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(50%,-50%);
+}
+.hr{
+    border: 1px solid #6E5544;
+}
+
+.f-zone1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .f-zone2 .col2-col{
+    width: 33% ;
+}
 
 @media only screen and (min-width: 1440px) { 
     html,body{
         font-size: 17px;
+    }
+    .footer{
+        width: 80%;
+        max-width: 1440px !important;
     }
 }
 
@@ -260,10 +344,10 @@ li{
 /* // `xl` applies to large devices (LapTop, less than 1064px) */
 @media  only screen and (max-width: 1063.98px) { 
     html,body{
-        font-size: 15px;
+        font-size: 14px;
     }
     .header,.footer{
-        width: 95%;
+        width: 85%;
     }
 }
 
@@ -306,6 +390,18 @@ li{
             width: 85%;
         }
     }
+    .f-zone1 .f-row{
+        margin-bottom: 0 !important;
+    }
+    .footer .f-zone1 .col-6{
+        width: 100% !important;
+        >.f-row{
+            justify-content: flex-start !important;
+        }
+    }
+    .footer .f-zone2 .col2-col{
+        width: 50% !important;
+    }
     
 }
 
@@ -336,12 +432,18 @@ li{
         left: auto;
         right: 20%;
     }
+    .footer .col1,.footer .col2{
+        width: 100%;
+    }
+    .footer .f-zone2 .col2-col{
+        width: 33% !important;
+    }
 }
 
 /* // `sm` applies to x-small devices (L phones, less than 576px) */
 @media  only screen and (max-width: 575.98px) { 
     html,body{
-        font-size: 15px;
+        font-size: 15px !important;
     }
     .brand-name h1{
         font-size: 2rem !important;
@@ -358,15 +460,39 @@ li{
     .icon-search{
         right: 25%;
     }
+    .footer .f-zone2 .col2-col{
+        width: 50% !important;
+    }
+    .footer .f-zone1 .social-icon{
+        height: 32px !important;
+        width: 280px !important;
+    }
+    .footer .f-zone1 .f-row > form{
+        width: 350px !important;
+        height: 35px !important;
+    }
+    .font-size-h2{
+        font-size: 1.75rem !important;
+    }
 }
 /* // `sm` applies to x-small devices (portrait phones, less than 425px) */
 @media  only screen and (max-width: 425.98px) { 
-    
     html,body{
         font-size: 14px;
     }
     .header,.footer{
         width: 95%;
+    }
+    .sidebar-menu{
+        width: 100vw !important;
+    }
+    .sidebar-search{
+        margin-left: 1rem;
+    }
+    .icon-close{
+        width: 35px !important;
+        top: 3rem !important;
+        right: 1rem !important;
     }
     .search-focus{
         .searchBar{
@@ -374,11 +500,19 @@ li{
         }
     }
     .icon-search{
-        right: 30%;
+        right: 25%;
         bottom: 0;
     }
     .icon-basket{
         bottom: 0;
+    }
+    .footer .f-zone1 .social-icon{
+        height: 32px !important;
+        width: 240px !important;
+    }
+    .footer .f-zone1 .f-row > form{
+        width: 280px !important;
+        height: 35px !important;
     }
 }
 /* // `sm` applies to x-small devices (small phones, less than 375px) */
