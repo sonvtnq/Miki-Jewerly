@@ -51,6 +51,9 @@ img{
 .font-w700{
     font-weight: 700 !important;
 }
+.font-w600{
+    font-weight: 600 !important;
+}
 .mt-120px{
     margin-top: 120px !important;
 }
@@ -87,6 +90,9 @@ img{
 .w-16px{
     width: 16px;
 }
+.w-30{
+    width: 30%;
+}
 .h-120px{
     height: 120px !important;
 }
@@ -106,6 +112,11 @@ a{
 }
 .footer,#zone2,#zone3,#zone5{
     width: 1136px;
+}
+.hover-none{
+    &:hover{
+        pointer-events: none;
+    }
 }
 .m-0-auto{
     margin: 0 auto;
@@ -646,8 +657,11 @@ input{
     .header{
         height: 100px;
     }
-    .header,.footer,#zone2,#zone3,#zone5{
+    .header{
         width: 95%;
+    }
+    .footer,#zone2,#zone3,#zone5{
+        width: 90%;
     }
     .sidebar-menu{
         width: 100vw !important;

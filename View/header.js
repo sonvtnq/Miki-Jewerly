@@ -36,9 +36,9 @@ var header=`<div class="header d-flex flex-column justify-content-center m-0-aut
                 <img src="../Images/icon/icon-menu.png" alt="icon-menu">
             </div>
             <ul class="menu-lv-1 d-flex list-unstyled justify-content-between w-100">
-                <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+                <li><a href="#" title="Trang chủ" class="home-page-title">Trang chủ</a></li>
                 <li>
-                    <a href="#" title="Sản phẩm">Sản phẩm</a>
+                    <a href="#" title="Sản phẩm" class="products-title">Sản phẩm</a>
                     <div class="icon-muitenxuong w-12px">
                         <img src="../Images/icon/icon-mui-ten-xuong.png" alt="icon-mui-ten-xuong">
                     </div>
@@ -49,7 +49,7 @@ var header=`<div class="header d-flex flex-column justify-content-center m-0-aut
                         <li><a href="#" title="Lắc">Lắc</a></li>
                     </ul>
                 </li>
-                <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
+                <li><a href="#" title="Về chúng tôi" class="about-us-title">Về chúng tôi</a></li>
             </ul>
         </div>
         <div class="brand-name">
