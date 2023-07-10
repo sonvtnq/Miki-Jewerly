@@ -40,6 +40,51 @@
     }
 }
 
+#zone2{
+    .content-zone2{
+        .title{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .content{
+            >h3{
+                font-size: 3rem;
+                margin: 3rem 0;
+            }
+            >p{
+                margin-bottom: 5rem;
+            }
+        }
+    }
+    .banner{
+        .img{
+            border-radius: 16px;
+            >img{
+                transition: all 1s;
+            }
+            &:hover img{
+                scale: 1.1;
+            }
+        }
+    }
+}
+#zone3{
+    .title{
+        >h3{
+            font-size: 2rem;
+        }
+    }
+    >.button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        >p{
+            padding: 10px 64px;
+        }
+    }
+}
+
 @media only screen and (min-width: 1440px) { 
     
 }
@@ -65,6 +110,24 @@
         }
         .button{
             margin-top: 2rem !important;
+        }
+    }
+    #zone2{
+        .content-zone2{
+            .title{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .content{
+                >h3{
+                    font-size: 3rem;
+                    margin: 2rem 0;
+                }
+                >p{
+                    margin-bottom: 2rem;
+                }
+            }
         }
     }
 }
@@ -102,6 +165,23 @@
             }
         }
     }
+    #zone2{
+        .content-zone2{
+            width: 50% !important;
+            .content{
+                >h3{
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+                >p{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .button{
+            margin-top: 1rem !important;
+        }
+    }
     
 }
 
@@ -136,6 +216,33 @@
             }
         }
     }
+    #zone2{
+        flex-direction: column-reverse;
+        .m-title{
+            display: block !important;
+        }
+        .title{
+            display: none;
+        }
+        .content-zone2{
+            width: 100% !important;
+        }
+        .banner{
+            width: 100%;
+        }
+    }
+    #zone3{
+        .products{
+            margin-bottom: 5rem;
+        }
+        >.button{
+            display: flex !important;
+            justify-content: center;
+            width: 45%;
+            top: auto;
+            bottom: 0;
+        }
+    }
 }
 
 /* // `sm` applies to x-small devices (L phones, less than 576px) */
@@ -152,13 +259,15 @@
                 }
             }
         }
-        
     }
 }
 /* // `sm` applies to x-small devices (portrait phones, less than 425px) */
 @media  only screen and (max-width: 425.98px) { 
     #zone1{
         .content-zone1{
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%,-50%) !important;
             >p{
                 font-size: 3rem !important;
             }
@@ -169,7 +278,22 @@
                 }
             }
         }
-        
+    }
+    .button{
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+    }
+    #zone2{
+        .button{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    #zone3 {
+        >.button{
+            width: 45% !important;
+        }
     }
 }
 /* // `sm` applies to x-small devices (small phones, less than 375px) */

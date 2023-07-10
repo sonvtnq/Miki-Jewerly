@@ -60,6 +60,9 @@ img{
 .w-70{
     width: 70%;
 }
+.w-45{
+    width:45%;
+}
 .h-32px{
     height: 32px;
 }
@@ -101,7 +104,7 @@ a{
     height: 128px;
     width: 1136px;
 }
-.footer,#zone2,#zone3,#zone4,#zone5{
+.footer,#zone2,#zone3,#zone5{
     width: 1136px;
 }
 .m-0-auto{
@@ -292,6 +295,7 @@ li{
     justify-content: center;
     .searchBar{
         width: 80% !important;
+        max-width: 1000px !important;
         margin-top: 3rem !important;
     }
     >.icon-close-search{
@@ -372,7 +376,7 @@ input{
     background-color: #000;
     color: #fff;
     &:hover{
-        box-shadow: 1px 1px 25px 5px rgba(255,255,255, 0.3);
+        box-shadow: 1px 1px 25px 5px rgba(0,0,0, 0.3);
         &::before{
             left: 100%;
             transition: all 650ms;
@@ -388,23 +392,52 @@ input{
         background: linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255, 0.2),
+        rgba(255,255,255, 0.4),
         transparent
         );
     }
 }
 .button{
     position: relative;
-    display: inline-block;
+    display: inline-block !important;
     border-radius: 8px ;
     line-height: 24px;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
     >p{
+        white-space: nowrap;
         display: inline-block;
         font-weight: 700;
         padding: 8px 46px;
         margin-bottom: 0;
+    }
+}
+.item-product{
+    width: 22.5%;
+    text-align: center;
+    padding-top: 2.5rem;
+    .img{
+        border-radius: 16px;
+    }
+    .detail{
+        >P{
+            white-space: nowrap !important;
+            margin: 0 auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+    }
+    .button{
+        >p{
+            padding: 8px 0 !important;
+        }
+    }
+    &:hover .img{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+        transition: all 0.25s;
     }
 }
 
@@ -412,7 +445,7 @@ input{
     html,body{
         font-size: 17px;
     }
-    .footer,#zone2,#zone3,#zone4,#zone5{
+    .footer,#zone2,#zone3,#zone5{
         width: 80%;
         max-width: 1440px !important;
     }
@@ -420,7 +453,7 @@ input{
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media only screen and (max-width: 1439.98px) {
-    .header,.footer,#zone2,#zone3,#zone4,#zone5{
+    .header,.footer,#zone2,#zone3,#zone5{
         width: 80%;
     }
 }
@@ -430,7 +463,7 @@ input{
     html,body{
         font-size: 15px;
     }
-    .header,.footer,#zone2,#zone3,#zone4,#zone5{
+    .header,.footer,#zone2,#zone3,#zone5{
         width: 85%;
     }
 }
@@ -447,7 +480,7 @@ input{
     html,body{
         font-size: 15px;
     }
-    .header,.footer,#zone2,#zone3,#zone4,#zone5{
+    .header,.footer,#zone2,#zone3,#zone5{
         width: 90%;
     }
     .menu-lv-1{
@@ -498,6 +531,18 @@ input{
             padding: 8px 32px;
         }
     }
+    .item-product{
+        .detail{
+            >p{
+                font-size: 1rem !important;
+            }
+        }
+        .button{
+            >p{
+                font-size: .8rem !important;
+            }
+        }
+    }
     
 }
 
@@ -537,12 +582,31 @@ input{
     .footer .f-zone2 .col2-col{
         width: 33% !important;
     }
+    .item-product{
+        width: 45% !important;
+        
+    }
+    .item-product{
+        .detail{
+            >p{
+                font-size: 1.25rem !important;
+            }
+        }
+        .button{
+            >p{
+                font-size: 1rem !important;
+            }
+        }
+    }
 }
 
 /* // `sm` applies to x-small devices (L phones, less than 576px) */
 @media  only screen and (max-width: 575.98px) { 
     html,body{
         font-size: 14px !important;
+    }
+    .header{
+        height: 115px;
     }
     .brand-name h1{
         font-size: 2rem !important;
@@ -579,7 +643,10 @@ input{
     html,body{
         font-size: 14px;
     }
-    .header,.footer,#zone2,#zone3,#zone4,#zone5{
+    .header{
+        height: 100px;
+    }
+    .header,.footer,#zone2,#zone3,#zone5{
         width: 95%;
     }
     .sidebar-menu{
@@ -616,5 +683,7 @@ input{
 }
 /* // `sm` applies to x-small devices (small phones, less than 375px) */
 @media  only screen and (max-width: 375.98px) { 
-    
+    html,body{
+        font-size: 13px !important;
+    }
 }
