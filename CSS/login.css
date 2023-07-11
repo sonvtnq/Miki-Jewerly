@@ -228,6 +228,9 @@ input[type="password"]{
 
 /* // `sm` applies to x-small devices (L phones, less than 576px) */
 @media  only screen and (max-width: 575.98px) { 
+    header{
+        height: 80px;
+    }
     .section{
         .head{
             margin-top: 0 !important;

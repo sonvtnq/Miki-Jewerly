@@ -23,12 +23,12 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                 </div>
                 <input type="checkbox" name="ckbMenuLV2" id="ckbMenuLV2">
             </li>
-            <li class="menu-lv2"><a href="#" title="Nhẫn">Nhẫn</a></li>
-            <li class="menu-lv2"><a href="#" title="Đồng hồ">Đồng hồ</a></li>
-            <li class="menu-lv2"><a href="#" title="Dây chuyền">Dây chuyền</a></li>
-            <li class="menu-lv2"><a href="#" title="Bông tai">Bông tai</a></li>
-            <li class="menu-lv2"><a href="#" title="Lắc">Lắc</a></li>
-            <li class="menu-lv2"><a href="./products.html" title="Xem tất cả">Xem tất cả</a></li>
+            <li class="menu-lv2"><a onclick="goToRings()" href="#" title="Nhẫn">Nhẫn</a></li>
+            <li class="menu-lv2"><a onclick="goToWatch()" href="#" title="Đồng hồ">Đồng hồ</a></li>
+            <li class="menu-lv2"><a onclick="goToNecklace()" href="#" title="Dây chuyền">Dây chuyền</a></li>
+            <li class="menu-lv2"><a onclick="goToEarings()" href="#" title="Bông tai">Bông tai</a></li>
+            <li class="menu-lv2"><a onclick="goToBracelet()" href="#" title="Lắc">Lắc</a></li>
+            <li class="menu-lv2"><a onclick="goToProducts()" href="#" title="Xem tất cả">Xem tất cả</a></li>
             <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
             <li><a onclick="goToLogin()" href="#" title="Đăng nhập">Đăng nhập</a></li>
         </ul>
@@ -53,11 +53,11 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                         <img src="../Images/icon/icon-mui-ten-xuong.png" alt="icon-mui-ten-xuong">
                     </div>
                     <ul class="menu-lv-2 d-none">
-                        <li><a href="#" title="Nhẫn">Nhẫn</a></li>
-                        <li><a href="#" title="Đồng hồ">Đồng hồ</a></li>
-                        <li><a href="#" title="Dây chuyền">Dây chuyền</a></li>
-                        <li><a href="#" title="Bông tai">Bông tai</a></li>
-                        <li><a href="#" title="Lắc">Lắc</a></li>
+                        <li onclick="goToRings()" ><a href="#" title="Nhẫn">Nhẫn</a></li>
+                        <li onclick="goToWatch()"><a href="#" title="Đồng hồ">Đồng hồ</a></li>
+                        <li onclick="goToNecklace()"><a href="#" title="Dây chuyền">Dây chuyền</a></li>
+                        <li onclick="goToEarings()"><a href="#" title="Bông tai">Bông tai</a></li>
+                        <li onclick="goToBracelet()"><a href="#" title="Lắc">Lắc</a></li>
                     </ul>
                 </li>
                 <li><a href="#" title="Về chúng tôi" class="about-us-title">Về chúng tôi</a></li>

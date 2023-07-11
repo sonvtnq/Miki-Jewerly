@@ -179,14 +179,27 @@ var listProduct=[
         name: 'Lắc chân',
         price: 299000,
     },
+    {
+        id: 31,
+        img:'../Images/dong-ho.png',
+        name: 'Đồng hồ',
+        price: 1299000,
+    },
+    {
+        id: 32,
+        img:'../Images/dong-ho.png',
+        name: 'Đồng hồ',
+        price: 2999000,
+    },
 
 ];
 
-var earings=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var earings=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 var rings=[17,20,21,22,23,24]
 var necklace=[19,25,26,27,28]
 var bracelet=[18,29,30]
-var watch=[]
+var watch=[31,32]
+var all=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
 
 //Hàm tìm product bằng id
 function getProductById(ID){
@@ -281,6 +294,9 @@ function blurSearch(){
     $('body').removeClass('overflow-hide');
 }
 
+
+
+//Các hàm di chuyển trang
 function goToHomePage(){
     // Kiểm tra trang hiện tại
     if (!window.location.href.includes('home-page.html')) {
@@ -293,9 +309,30 @@ function goToLogin(){
         window.location.href = './login.html'
     }
 }
-function goToProducts(){
-    if (!window.location.href.includes('products.html')) {
+
+function goToProducts() {
+    sessionStorage.setItem('category', 'all');
         window.location.href = './products.html'
-    }
+}
+  
+function goToRings() {
+    sessionStorage.setItem('category', 'rings');
+        window.location.href = './products.html'
+}
+function goToWatch() {
+    sessionStorage.setItem('category', 'watch');
+        window.location.href = './products.html'
+}
+function goToNecklace() {
+    sessionStorage.setItem('category', 'necklace');
+        window.location.href = './products.html'
+}
+function goToEarings() {
+    sessionStorage.setItem('category', 'earings');
+        window.location.href = './products.html'
+}
+function goToBracelet() {
+    sessionStorage.setItem('category', 'bracelet');
+        window.location.href = './products.html'
 }
 

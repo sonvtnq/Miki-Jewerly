@@ -4,17 +4,45 @@ for(var i=0;i<listProduct.length;i++){
     setProduct(listProduct[i]);
 }
 
+var listProductIdToPrint
+
+var category = sessionStorage.getItem('category');
+if (category === 'all') {
+    $('.to-link').text('Tất cả sản phẩm');
+    listProductIdToPrint=all;
+} 
+else if (category === 'rings') {
+    $('.to-link').text('Nhẫn');
+    listProductIdToPrint=rings;
+}
+else if (category === 'watch') {
+    $('.to-link').text('Đồng hồ');
+    listProductIdToPrint=watch
+}
+else if (category === 'necklace') {
+    $('.to-link').text('Dây chuyền');
+    listProductIdToPrint=necklace
+}
+else if (category === 'earings') {
+    $('.to-link').text('Bông tai');
+    listProductIdToPrint=earings
+}
+else if (category === 'bracelet') {
+    $('.to-link').text('Lắc');
+    listProductIdToPrint=bracelet
+}
+
 var pageSize = 8;
-var numberPage = Math.ceil(listProduct.length / pageSize);
-var currentPage; 
+var numberPage = Math.ceil(listProductIdToPrint.length / pageSize);
+var currentPage;
 
 function checkList(pageNumber){
     $('.products').empty();
 
     var i = (pageSize * (pageNumber - 1));
-    var endIndex = Math.min(i + pageSize, listProduct.length);
+    var endIndex = Math.min(i + pageSize, listProductIdToPrint.length);
     for (let j = i; j < endIndex; j++){
-        setProduct(listProduct[j]);
+        setProduct(getProductById(listProductIdToPrint[j]));
     }
     $('.number-page').removeClass('page-number-active');
     $('.number-page').eq(pageNumber).addClass('page-number-active'); 
