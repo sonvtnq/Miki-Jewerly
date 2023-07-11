@@ -215,11 +215,14 @@ function price(itemPrice){
     itemPrice = itemPrice.toString()
     var l= itemPrice.length;
     var price='';
-    var i=0;
     while(1){
         if(price.length===0){
             price+=itemPrice[itemPrice.length-l];
             l--;
+            if(l==0){
+                price+="đ";
+                break;
+            }
             continue;
         }
         if(l%3===0){
@@ -257,7 +260,8 @@ function setProduct(obj){
 
 //hàm hiện ra product item ở trong giỏ hàng
 function setProductInBasket(obj){
-    var view=`<div class="item-product-row d-flex justify-content-between">
+    var quantityValue = sessionStorage.getItem(`quantityId${obj.id}`);
+    var view=`<div class="item-product-${obj.id} item-product-row d-flex justify-content-between">
                 <div class="img w-25 position-relative">
                     <img src="${obj.img}" alt="${obj.name}">
                 </div>
@@ -277,23 +281,23 @@ function setProductInBasket(obj){
                     </div>
                     <div class="d-flex justify-content-between">
                         <div class="quantity-bar d-flex">
-                            <div class=" minus d-flex align-items-center" onclick="quantityDecrease('quantityId${obj.id}')">
+                            <div class=" minus d-flex align-items-center" onclick="quantityDecrease('quantityId${obj.id}',${obj.id})">
                                 <img src="../Images/icon/icon-minuss.jpg" alt="minus">
                             </div>
-                            <input type="number" name="quantity" id="quantityId${obj.id}" step="1" value="1">
-                            <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease('quantityId${obj.id}')">
+                            <input type="number" name="quantity" id="quantityId${obj.id}" step="1" value="${quantityValue}">
+                            <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease('quantityId${obj.id}',${obj.id})">
                                 <img src="../Images/icon/icon-plus.png" alt="plus">
                             </div>
                         </div>
                         <div class="price-item">
-                            <p class="item-price font-w700">${price(obj.price)}</p>
+                            <p class="item-price-${obj.id} item-price font-w700">${price(obj.price * quantityValue)}</p>
                         </div>
                     </div>
                     
                 </div>
             </div>`
-    
     $('.products').append(view);
+    sessionStorage.setItem(`quantityId${obj.id}`, quantityValue); // lưu vào sessionStorage
 }
 
 // Giỏ hàng lưu trong sessionStorage
@@ -331,6 +335,7 @@ function addToBasket(productID) {
   else{
     // Thêm sản phẩm vào giỏ hàng
     basket.push(productID);
+    sessionStorage.setItem(`quantityId${productID}`,1); // Lưu giá trị vào sessionStorage
     alert("Đã thêm sản phẩm vào giỏ hàng !");
   }
   
@@ -383,19 +388,36 @@ function blurSearch(){
 }
 
 //Hàm tăng giảm số lượng
-function quantityIncrease(id) {
-    var quantityCurrent = $("#" + id);
+function quantityIncrease(quantityId,productID) {
+    var quantityCurrent = $("#" + quantityId);
     var quantityValue = parseInt(quantityCurrent.val());
     quantityCurrent.val(quantityValue + 1);
+    sessionStorage.setItem(quantityId, quantityValue + 1); // Lưu giá trị vào sessionStorage
+
+    quantityValue = parseInt(quantityCurrent.val());
+    var pri=quantityValue*getProductById(productID).price;
+    console.log(price);
+    var lastPrice=price(pri);
+    $(`.item-price-${productID}`).text(lastPrice);
+    
+    printBill()
+
 }
-function quantityDecrease(id){
-    var quantityCurrent = $("#" + id);
+function quantityDecrease(quantityId,productID){
+    var quantityCurrent = $("#" + quantityId);
     var quantityValue = parseInt(quantityCurrent.val());
     if(quantityValue>0){
         quantityCurrent.val(quantityValue - 1);
+        sessionStorage.setItem(quantityId, quantityValue -   1); // Lưu giá trị vào sessionStorage
     }else{
         quantityCurent.value=0;
     }
+
+    quantityValue = parseInt(quantityCurrent.val());
+    var pri=quantityValue*getProductById(productID).price;
+    console.log(price);
+    var lastPrice=price(pri);
+    $(`.item-price-${productID}`).text(lastPrice);
     
 }
 

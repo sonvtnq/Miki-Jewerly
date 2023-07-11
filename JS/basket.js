@@ -1,4 +1,3 @@
-var sumItemPrice=0;
 function setProductInBasketPage(){
     $('.products').html('');
     for(var i=0;i<basket.length;i++){
@@ -7,7 +6,41 @@ function setProductInBasketPage(){
     }
 }
 
+function sumItemPrice(){
+    var sumItemPriceNumber=0;
+    for(var i=0;i<basket.length;i++){
+        var quantityValue = sessionStorage.getItem(`quantityId${basket[i]}`);
+        sumItemPriceNumber+=getProductById(basket[i]).price * quantityValue;
+    }
+    return sumItemPriceNumber;
+}
+
+
+var shipPrice=30000;
+var giftPrice=199000;
+
+function printBill(){
+    var sumItemPriceNumber= sumItemPrice();
+    if(basket.length==0){
+        $('.alert-products').addClass('d-block');
+        shipPrice=0;
+        giftPrice=0;
+    }else{
+        setProductInBasketPage();
+    }
+    $('.sum-item-price').text(price(sumItemPriceNumber))
+    $('.ship-price').text(price(shipPrice))
+    $('.gift-price').text("- "+price(giftPrice))
+    if(sumItemPriceNumber+shipPrice-giftPrice < 0){
+        $('.sum-price').text(price(0))
+    }else{
+        $('.sum-price').text(price(sumItemPriceNumber+shipPrice-giftPrice))
+    }
+    
+}
+
 function removeFromBasket(productID) {
+    // debugger;
     // Lấy giỏ hàng từ sessionStorage
     var basketJson = sessionStorage.getItem('basket');
     var basket = JSON.parse(basketJson);
@@ -21,21 +54,11 @@ function removeFromBasket(productID) {
     var updatedBasketJson = JSON.stringify(updatedBasket);
     sessionStorage.setItem('basket', updatedBasketJson);
     
-    goToBasket();
+    $(`.item-product-${productID}`).addClass('d-none');
 }
+printBill();
 
-if(basket.length==0){
-    $('.alert-products').addClass('d-block');
-}else{
-    setProductInBasketPage()
-}
 
-$('.sum-item-price').text(price(sumItemPrice))
 
-var shipPrice=30000;
-$('.ship-price').text(price(shipPrice))
 
-var giftPrice=199000;
-$('.gift-price').text(price(giftPrice))
 
-$('.sum-price').text(price(sumItemPrice+shipPrice-giftPrice))
