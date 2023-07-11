@@ -241,16 +241,103 @@ function setProduct(obj){
     var view=`<div class="item-product">
                 <div class="img">
                     <img src="${obj.img}" alt="${obj.name}">
+                    <div>
+                        <p>Xem chi tiết</p>
+                    </div>
                 </div>
                 <div class="detail">
                     <p class="font-w700">${obj.name}</p>
                     <p style="color: #92715A;" class="font-w700">${price(obj)}</p>
-                    <div class="button btn-black w-100">
+                    <div class="button btn-black w-100" onclick="addToBasket(${obj.id})">
                         <p>Thêm vào giỏ hàng </p>
                     </div>
                 </div>
             </div>`
     $('.products').append(view);
+}
+
+//hàm hiện ra product item ở trong giỏ hàng
+function setProductInBasket(obj){
+    var view=`<div class="item-product-row d-flex justify-content-between">
+                <div class="img w-25 position-relative">
+                    <img src="${obj.img}" alt="${obj.name}">
+                </div>
+                <div class="detail d-flex flex-column justify-content-between w-68">
+                    <div class="position-relative">
+                        <div class="name">
+                            <p class="font-w700">${obj.name}</p>
+                        </div>
+                        <div class="item-color">
+                            <p>Màu sắc: Sliver</p>
+                        </div>
+                        <div class="icon-close">
+                            <div class="w-32px">
+                                <img src="../Images/icon/icon-close.png" alt="icon-close">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="quantity d-flex">
+                            <div class="minus d-flex align-items-center" onclick="quantityDecrease()">
+                                <img src="../Images/icon/icon-minuss.jpg" alt="minus">
+                            </div>
+                            <input type="number" name="quantity" id="quantity" step="1" value="1">
+                            <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease()">
+                                <img src="../Images/icon/icon-plus.png" alt="plus">
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <p class="item-price font-w700">${obj.price}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>`
+    $('.products').append(view);
+}
+
+// Giỏ hàng lưu trong sessionStorage
+var basket = [];
+
+//Kiểm tra xem sản phẩm có trong giỏ hàng hay chưa
+function isInBasket(productID){
+    for(var i=0;i<basket.length;i++){
+        if(basket[i]==productID){
+            return true;
+        }
+    }
+    return false;
+}
+
+// Kiểm tra xem giỏ hàng đã tồn tại trong sessionStorage hay chưa
+if (sessionStorage.getItem('basket')) {
+  var basketJson = sessionStorage.getItem('basket');
+  basket = JSON.parse(basketJson);
+} else {
+  // Nếu chưa tồn tại, tạo một giỏ hàng mới và lưu vào sessionStorage
+  var basketJson = JSON.stringify(basket);
+  sessionStorage.setItem('basket', basketJson);
+}
+
+// Hàm thêm sản phẩm vào giỏ hàng
+function addToBasket(productID) {
+  // Lấy giỏ hàng từ sessionStorage
+  var basketJson = sessionStorage.getItem('basket');
+  var basket = JSON.parse(basketJson);
+
+  if(isInBasket(productID)){
+    alert("Sản phẩm đã tồn tại trong giỏ hàng rồi !");
+  }
+  else{
+    // Thêm sản phẩm vào giỏ hàng
+    basket.push(productID);
+    alert("Đã thêm sản phẩm vào giỏ hàng !");
+  }
+  
+
+  // Cập nhật giỏ hàng trong sessionStorage
+  var updatedBasketJson = JSON.stringify(basket);
+  sessionStorage.setItem('basket', updatedBasketJson);
 }
 
 //Hàm mở menu con
@@ -294,6 +381,25 @@ function blurSearch(){
     $('body').removeClass('overflow-hide');
 }
 
+//Hàm tăng giảm số lượng
+function quantityIncrease(){
+    var quantityCurent=document.getElementById('quantity');
+    var quantity=document.getElementById('quantity').value;
+    quantity=parseInt(quantity);
+    quantityCurent.value=quantity+1;
+}
+function quantityDecrease(){
+    var quantityCurent=document.getElementById('quantity');
+    var quantity=document.getElementById('quantity').value;
+    quantity=parseInt(quantity);
+    if(quantity>0){
+        quantityCurent.value=quantity-1;
+    }else{
+        quantityCurent.value=0;
+    }
+    
+}
+
 
 
 //Các hàm di chuyển trang
@@ -333,6 +439,12 @@ function goToEarings() {
 }
 function goToBracelet() {
     sessionStorage.setItem('category', 'bracelet');
-        window.location.href = './products.html'
+    window.location.href = './products.html'
+}
+
+function goToBasket(){
+    if (!window.location.href.includes('basket.html')) {
+        window.location.href = './basket.html'
+    }
 }
 

@@ -29,7 +29,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
             <li class="menu-lv2"><a onclick="goToEarings()" href="#" title="Bông tai">Bông tai</a></li>
             <li class="menu-lv2"><a onclick="goToBracelet()" href="#" title="Lắc">Lắc</a></li>
             <li class="menu-lv2"><a onclick="goToProducts()" href="#" title="Xem tất cả">Xem tất cả</a></li>
-            <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
+            <li><a onclick="goToBasket()" href="#" title="Giỏ hàng">Giỏ hàng</a></li>
             <li><a onclick="goToLogin()" href="#" title="Đăng nhập">Đăng nhập</a></li>
         </ul>
     </div>
@@ -78,7 +78,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                     </div>
                 </form>
             </div>
-            <div class="icon-basket w-32px d-flex align-items-center">
+            <div class="icon-basket w-32px d-flex align-items-center" onclick="goToBasket()">
                 <img src="../Images/icon/icon-basket.png" alt="icon-basket" class="cursor-pointer icon-hover">
             </div>
             <div class="icon-user w-32px d-flex align-items-center" onclick="goToLogin()">

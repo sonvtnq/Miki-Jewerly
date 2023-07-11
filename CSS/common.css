@@ -9,7 +9,8 @@ html,body{
     color:#272727;
 }
 header,footer{
-    z-index: 2 ;
+    z-index: 10 ;
+    background-color: #fff9f6 !important;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-top: 0;
@@ -26,6 +27,9 @@ img{
 }
 .w-40px{
     width: 40px;
+}
+.w-40{
+    width: 40%;
 }
 .w-85{
     width: 85%;
@@ -69,6 +73,9 @@ img{
 .w-45{
     width:45%;
 }
+.w-65{
+    width: 65%;
+}
 .h-32px{
     height: 32px;
 }
@@ -98,6 +105,9 @@ img{
 }
 .w-30{
     width: 30%;
+}
+.w-68{
+    width: 68%;
 }
 .w-9px{
     width: 9px;
@@ -463,7 +473,34 @@ input{
     text-align: center;
     padding-top: 2.5rem;
     .img{
+        position: relative;
         border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.5s;
+        &:hover{
+            >div{
+                display: flex;
+            }
+        }
+        >div{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            >p{
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 1.5rem;
+                color: #fff;
+                margin-bottom: 0;
+                padding: 4px 8px;
+            }
+        }
     }
     .detail{
         >P{
@@ -482,6 +519,68 @@ input{
     &:hover .img{
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
         transition: all 0.25s;
+    }
+}
+
+/* xóa icon của input:number  */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.item-product-row{
+    padding: 3rem 0;
+    border-bottom: 1px solid #D8D8D8;
+    .detail{
+        .name{
+            font-size: 1.5rem;
+            margin-bottom: 2%;
+            cursor: pointer;
+            &:hover p{
+                text-decoration: underline;
+            }
+        }
+        .item-color{
+            display: inline-block;
+            cursor: pointer;
+            color: #707070;
+            &:hover{
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+        .icon-close{
+            cursor: pointer;
+            position: absolute;
+            top: 2%;
+            right: 1%;
+        }
+        .quantity{
+            .minus{
+                width: 20px;
+                margin-right: .5rem;
+                cursor: pointer;
+            }
+            .plus{
+                margin-left: .5rem;
+                cursor: pointer;
+            }
+            & input{
+                /* display: inline-block !important; */
+                background-color: #fff ;
+                text-align: center !important;
+                border: none;
+                width: 40px;
+                color: #272727;
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+        }
+        .item-price{
+            font-size: 1.5rem;
+            color: #92715A;
+        }
     }
 }
 

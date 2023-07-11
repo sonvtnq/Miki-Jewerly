@@ -1,0 +1,57 @@
+body{
+    background-color: #fff;
+}
+#footer{
+    padding-top: 120px;
+}
+#header{
+    z-index: 1;
+}
+section{
+    z-index: 0;
+    padding: 3rem 0;
+    & p{
+        margin-bottom: 0;
+    }
+    .link{
+        margin-bottom: 2rem;
+        >p{
+            margin: 0 !important;
+            padding: 0 .5rem;
+        }
+    }
+    .content{
+        .bill-temporary{
+            .gift{
+                padding: 3rem 0;
+                border-bottom: 1px solid #D8D8D8;
+                >p{
+                    font-size: 1.25rem;
+                }
+                & input{
+                    width: 80%;
+                    padding: .5rem 1rem;
+                    background-color: #fff;
+                }
+            }
+            .bill{
+                padding: 3rem 0;
+                border-bottom: 1px solid #D8D8D8;
+                .bill-row{
+                    padding: 1rem 0;
+
+                }
+                .price{
+                    font-size: 1.25rem;
+                }
+            }
+            .last-price{
+                padding: 3rem 0;
+                .sum-price{
+                    color: #92715A;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
