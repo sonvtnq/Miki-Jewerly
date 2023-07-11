@@ -4,3 +4,4 @@ setProduct(getProductById(19))
 setProduct(getProductById(18))
 
 $('.home-page-title').addClass('font-w700');
+

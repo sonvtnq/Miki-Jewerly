@@ -27,6 +27,9 @@ img{
 .w-40px{
     width: 40px;
 }
+.w-85{
+    width: 85%;
+}
 .brand-name{
     color: #272727;
     >h1{
@@ -87,6 +90,9 @@ img{
 .w-60{
     width: 60%;
 }
+.w-32{
+    width: 32%;
+}
 .w-16px{
     width: 16px;
 }
@@ -110,7 +116,7 @@ a{
     height: 128px;
     width: 1136px;
 }
-.footer,#zone2,#zone3,#zone5{
+.footer,section{
     width: 1136px;
 }
 .hover-none{
@@ -415,7 +421,6 @@ input{
     line-height: 24px;
     overflow: hidden;
     cursor: pointer;
-    display: flex;
     justify-content: center;
     >p{
         white-space: nowrap;
@@ -456,7 +461,7 @@ input{
     html,body{
         font-size: 17px;
     }
-    .footer,#zone2,#zone3,#zone5{
+    .footer,section{
         width: 80%;
         max-width: 1440px !important;
     }
@@ -464,7 +469,7 @@ input{
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media only screen and (max-width: 1439.98px) {
-    .header,.footer,#zone2,#zone3,#zone5{
+    .header,.footer,section{
         width: 80%;
     }
 }
@@ -474,7 +479,7 @@ input{
     html,body{
         font-size: 15px;
     }
-    .header,.footer,#zone2,#zone3,#zone5{
+    .header,.footer,section{
         width: 85%;
     }
 }
@@ -491,7 +496,7 @@ input{
     html,body{
         font-size: 15px;
     }
-    .header,.footer,#zone2,#zone3,#zone5{
+    .header,.footer,section{
         width: 90%;
     }
     .menu-lv-1{
@@ -660,7 +665,7 @@ input{
     .header{
         width: 95%;
     }
-    .footer,#zone2,#zone3,#zone5{
+    .footer,section{
         width: 90%;
     }
     .sidebar-menu{

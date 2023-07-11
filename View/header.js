@@ -20,7 +20,7 @@ var header=`<div class="header d-flex flex-column justify-content-center m-0-aut
                 <a href="#" title="Sản phẩm">Sản phẩm</a>
             </li>
             <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
-            <li><a href="#" title="Đăng nhập">Đăng nhập</a></li>
+            <li><a href="./login.html" title="Đăng nhập">Đăng nhập</a></li>
         </ul>
     </div>
 </div>
@@ -70,7 +70,7 @@ var header=`<div class="header d-flex flex-column justify-content-center m-0-aut
             <div class="icon-basket w-32px d-flex align-items-center">
                 <img src="../Images/icon/icon-basket.png" alt="icon-basket" class="cursor-pointer icon-hover">
             </div>
-            <div class="icon-user w-32px d-flex align-items-center ">
+            <div class="icon-user w-32px d-flex align-items-center" onclick="goToLogin()">
                 <img src="../Images/icon/icon-user.png" alt="icon-user"  class="cursor-pointer icon-hover">
             </div>
             

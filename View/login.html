@@ -4,37 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miki Jewelry - Login</title>
-
-    <!-- Khai báo bootstrap css -->
+    <link rel="icon" href="../Images/icon/logo-miki.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Nhúng file css của dev -->
-    
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/login.css">
 
-    <!-- Nhúng thư viện jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
-    <!-- header page -->
     <header>
 
     </header>
-    <!-- end header  -->
-    <!-- body page -->
-    <section>
+    <section class="m-0-auto d-flex position-relative">
+        <div class="banner w-55">
+            <img src="../Images/login-banner.png" alt="login banner">
+        </div>
+        <div class="content w-45 d-flex flex-column align-items-center">
+            <div class="head d-flex flex-column align-items-center w-100">
+                <div class="logo w-40px">
+                    <img src="../Images/icon/logo-miki.png" alt="logo">
+                </div>
+                <div class="brand-name">
+                    <a href="./home-page.html">
+                        <h2 class="font-w700 cursor-pointer font-playfair-display text-nowrap">MIKI JEWERLY</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="login w-85 m-0-auto">
+                <h3 class="font-w700">Đăng nhập</h3>
+                <form action="" method="post" class="d-flex flex-column w-100">
+                    <input type="text" name="userID" id="userID" placeholder="Nhập email hoặc số điện thoại" class="w-100 p-8px-16px">
+                    <input type="password" name="pass" id="pass" placeholder="Nhập mật khẩu" class="w-100 p-8px-16px">
+                </form>
+                <p>Quên mật khẩu?</p>
+                <div class="button btn-black w-100">
+                    <p>Đăng nhập</p>
+                </div>
+            </div>
+            <div class="or-login w-85 m-0-auto">
+                <p class="font-w600">Hoặc đăng nhập bằng</p>
+                <div class="items d-flex w-100 justify-content-between">
+                    <div class="item d-flex align-items-center">
+                        <div class="img">
+                            <img src="../Images/icon/facebook.png" alt="facebook">
+                        </div>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="item d-flex align-items-center">
+                        <div class="img">
+                            <img src="../Images/icon/google.png" alt="google">
+                        </div>
+                        <p>Google</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="go-register w-85 m-0-auto">
+                <p>Bạn chưa có tài khoản? <a href="./register.html">ĐĂNG KÍ</a></p>
+            </div>
+        </div>
         
     </section>
-    <!-- end body -->
-    <!-- footer page -->
-    <footer>
-        
+    <footer id="footer">
+        <script src="./footer.js"></script>
     </footer>
-    <!-- end footer  -->
-    <!-- Khai báo bootstrap js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Khai báo các file js tự code  -->
+    <script src="../JS/common.js"></script>
+    <script src="../JS/login.js"></script>
     
 </body>
 </html>

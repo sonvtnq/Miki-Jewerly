@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miki Jewelry - Register</title>
+    <link rel="icon" href="../Images/icon/logo-miki.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <section class="m-0-auto d-flex position-relative">
+        <div class="banner w-55">
+            <img src="../Images/register-banner.png" alt="register banner">
+        </div>
+        <div class="content w-45 d-flex flex-column align-items-center">
+            <div class="head d-flex flex-column align-items-center w-100">
+                <div class="logo w-40px">
+                    <img src="../Images/icon/logo-miki.png" alt="logo">
+                </div>
+                <div class="brand-name">
+                    <a href="./home-page.html">
+                        <h2 class="font-w700 cursor-pointer font-playfair-display text-nowrap">MIKI JEWERLY</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="register w-85 m-0-auto">
+                <h3 class="font-w700">Đăng kí tài khoản</h3>
+                <form action="" method="post" class="d-flex justify-content-between flex-wrap">
+                    <input type="text" name="Họ" id="ho" class="ho w-32 p-8px-16px" placeholder="Họ">
+                    <input type="text" name="Tên" id="ten" class="ten w-32 p-8px-16px" placeholder="Tên">
+                    <input type="text" name="Năm sinh" id="namSinh" class="nam-sinh w-32 p-8px-16px" placeholder="Năm sinh">
+                    <input type="text" name="Tài khoan" id="taiKhoan" class="tai-khoan p-8px-16px w-100" placeholder="Nhập email hoặc số điện thoại">
+                    <input type="password" name="Mật khẩu" id="matKhau" class="mat-khau p-8px-16px w-100" placeholder="Nhập mật khẩu từ 6 kí tự trở lên">
+                    <input type="password" name="Mật Khẩu" id="rMatKhau" class="mat-khau-lv2 p-8px-16px w-100" placeholder="Xác nhận lại mật Khẩu">
+                    <div class="nhan-tbao d-flex w-100">
+                        <input type="checkbox" name="Nhận Tbao" id="tBao" checked>
+                        <label for="tBao">Nhận thông tin khuyến mãi qua Email</label>
+                    </div>    
+                    <div class="dieu-khoan d-flex w-100">
+                        <input type="checkbox" name="Điều khoản" id="dieuKhoan">
+                        <label for="dieuKhoan">Tôi đã đọc và đồng ý với các <a href="#" onclick="alert('Đang cập nhật')">điều khoản chính sách</a> của Miki Jewelry</label>
+                    </div>    
+                    
+                </form>
+                <div class="button btn-black w-100">
+                    <p>Đăng kí</p>
+                </div>
+            </div>
+
+            <div class="go-login w-85 m-0-auto">
+                <p>Bạn đã có tài khoản? <a href="./login.html" class="font-w700">ĐĂNG NHẬP</a></p>
+            </div>
+        </div>
+        
+    </section>
+    <footer id="footer">
+        <script src="./footer.js"></script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../JS/common.js"></script>
+    <script src="../JS/register.js"></script>
+</body>
+</html>

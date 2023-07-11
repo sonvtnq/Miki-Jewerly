@@ -1,4 +1,5 @@
 #zone1{
+    max-width: none !important;
     .banner-zone1 img{
         transition: all 1s;
     }
@@ -85,6 +86,7 @@
     }
 }
 #zone4{
+    max-width: none !important;
     .banner-zone4 img{
         transition: all 1s;
     }
@@ -220,6 +222,99 @@
         }
     }
     
+}
+.back-ground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: none;
+    overflow: hidden;
+    .tron1 {
+        width: 72.3%; 
+        padding-bottom: 72.3%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        top: 27%;
+        right: 0;
+        transform: translate(65%,-50%);
+    }
+    .tron1 .tron1-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+    .tron2 {
+        width: 38.2%; 
+        padding-bottom: 38.2%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        transform: translate(-60%,50%);
+    }
+    .tron2 .tron2-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+    .tron3 {
+        width: 38.2%; 
+        padding-bottom: 38.2%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 3%;
+        right: -5%;
+        transform: translate(50%,50%);
+    }
+    .tron3 .tron3-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+    .tron4 {
+        display: none;
+        width: 55%; 
+        padding-bottom: 55%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(50%,50%);
+    }
+    .tron4 .tron4-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+}
+
+#zone1,#zone2,#zone3,#zone4,#zone5{
+    z-index: 1;
 }
 
 @media only screen and (min-width: 1440px) { 
@@ -385,6 +480,21 @@
                 font-size: 1.8rem;
             }
         }
+    }
+    .back-ground{
+        .tron1{
+            top:15%;
+            right: 0;
+        }
+        .tron2{
+            bottom: 20%;
+            left: -5%;
+        }
+        .tron3{
+            bottom: 3rem;
+            right: -3rem;
+        }
+        
     }
     
 }
@@ -576,6 +686,13 @@
            .brand-name{
                 font-size: 2.8rem;
             } 
+        }
+        
+    }
+    .back-ground{
+        .tron2{
+            bottom: 16%;
+            left: -5%;
         }
         
     }

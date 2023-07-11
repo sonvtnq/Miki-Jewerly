@@ -196,3 +196,7 @@ function blurSearch(){
     $('body').removeClass('overflow-hide');
 }
 
+function goToLogin(){
+    window.location.href = './login.html'
+}
+
