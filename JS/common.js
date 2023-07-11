@@ -113,8 +113,80 @@ var listProduct=[
         name: 'Ocean Necklace',
         price: 375000,
     },
+    {
+        id: 20,
+        img:'../Images/Products/Emme-Rings.png',
+        name: 'Rings',
+        price: 739000,
+    },
+    {
+        id: 21,
+        img:'../Images/Products/Emme-Rings.png',
+        name: 'Rings',
+        price: 999000,
+    },
+    {
+        id: 22,
+        img:'../Images/Products/Emme-Rings.png',
+        name: 'Rings',
+        price: 899000,
+    },
+    {
+        id: 23,
+        img:'../Images/Products/Emme-Rings.png',
+        name: 'Rings',
+        price: 699000,
+    },
+    {
+        id: 24,
+        img:'../Images/Products/Emme-Rings.png',
+        name: 'Rings',
+        price: 799000,
+    },
+    {
+        id: 25,
+        img:'../Images/Products/Ocean-Necklace.png',
+        name: 'Necklace',
+        price: 1375000,
+    },
+    {
+        id: 26,
+        img:'../Images/Products/Ocean-Necklace.png',
+        name: 'Necklace',
+        price: 175000,
+    },
+    {
+        id: 27,
+        img:'../Images/Products/Ocean-Necklace.png',
+        name: 'Necklace',
+        price: 137000,
+    },
+    {
+        id: 28,
+        img:'../Images/Products/Ocean-Necklace.png',
+        name: 'Necklace',
+        price: 135000,
+    },
+    {
+        id: 29,
+        img:'../Images/Products/Era-Bracelet.png',
+        name: 'Lắc tay',
+        price: 599000,
+    },
+    {
+        id: 30,
+        img:'../Images/Products/Era-Bracelet.png',
+        name: 'Lắc chân',
+        price: 299000,
+    },
 
-]
+];
+
+var earings=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var rings=[17,20,21,22,23,24]
+var necklace=[19,25,26,27,28]
+var bracelet=[18,29,30]
+var watch=[]
 
 //Hàm tìm product bằng id
 function getProductById(ID){
@@ -209,7 +281,21 @@ function blurSearch(){
     $('body').removeClass('overflow-hide');
 }
 
+function goToHomePage(){
+    // Kiểm tra trang hiện tại
+    if (!window.location.href.includes('home-page.html')) {
+        // Nếu sai, di chuyển đến trang khác
+        window.location.href = './home-page.html'
+    }
+}
 function goToLogin(){
-    window.location.href = './login.html'
+    if (!window.location.href.includes('login.html')) {
+        window.location.href = './login.html'
+    }
+}
+function goToProducts(){
+    if (!window.location.href.includes('products.html')) {
+        window.location.href = './products.html'
+    }
 }
 

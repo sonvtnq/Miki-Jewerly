@@ -1,5 +1,9 @@
-section{
-    margin-top: 120px !important;
+header{
+    height: 128px;
+}
+.section{
+    z-index: 1;
+    background-color: #fff9f6;
     display: block;
     border-radius: 20px;
     overflow: hidden;
@@ -69,6 +73,76 @@ section a{
     color: #B78D71;
     &:hover{
         text-decoration: underline;
+    }
+}
+.back-ground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+    background-color: none;
+    overflow: hidden;
+    .tron1 {
+        width: 25%; 
+        padding-bottom: 25%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(35%,-45%);
+    }
+    .tron1 .tron1-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+    .tron2 {
+        width: 20%; 
+        padding-bottom: 20%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-60%,-50%);
+    }
+    .tron2 .tron2-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
+    .tron3 {
+        width: 38.2%; 
+        padding-bottom: 38.2%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 70%;
+        transform: translate(50%,65%);
+    }
+    .tron3 .tron3-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
     }
 }
 

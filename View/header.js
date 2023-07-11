@@ -13,7 +13,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
             </form>
         </div>
         <ul>
-            <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+            <li><a onclick="goToHomePage()" href="#" title="Trang chủ">Trang chủ</a></li>
             <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
             <li><a href="#" title="Bộ sưu tập">Bộ sưu tập</a></li>
             <li class="d-flex justify-content-center position-relative">
@@ -24,12 +24,13 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                 <input type="checkbox" name="ckbMenuLV2" id="ckbMenuLV2">
             </li>
             <li class="menu-lv2"><a href="#" title="Nhẫn">Nhẫn</a></li>
+            <li class="menu-lv2"><a href="#" title="Đồng hồ">Đồng hồ</a></li>
             <li class="menu-lv2"><a href="#" title="Dây chuyền">Dây chuyền</a></li>
             <li class="menu-lv2"><a href="#" title="Bông tai">Bông tai</a></li>
             <li class="menu-lv2"><a href="#" title="Lắc">Lắc</a></li>
-            <li class="menu-lv2"><a href="#" title="Xem tất cả">Xem tất cả</a></li>
+            <li class="menu-lv2"><a href="./products.html" title="Xem tất cả">Xem tất cả</a></li>
             <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
-            <li><a href="./login.html" title="Đăng nhập">Đăng nhập</a></li>
+            <li><a onclick="goToLogin()" href="#" title="Đăng nhập">Đăng nhập</a></li>
         </ul>
     </div>
 </div>
@@ -45,14 +46,15 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                 <img src="../Images/icon/icon-menu.png" alt="icon-menu">
             </div>
             <ul class="menu-lv-1 d-flex list-unstyled justify-content-between w-100">
-                <li><a href="#" title="Trang chủ" class="home-page-title">Trang chủ</a></li>
+                <li><a onclick="goToHomePage()" href="#" title="Trang chủ" class="home-page-title">Trang chủ</a></li>
                 <li>
-                    <a href="#" title="Sản phẩm" class="products-title">Sản phẩm</a>
+                    <a onclick="goToProducts()" href="#" title="Sản phẩm" class="products-title">Sản phẩm</a>
                     <div class="icon-muitenxuong w-12px">
                         <img src="../Images/icon/icon-mui-ten-xuong.png" alt="icon-mui-ten-xuong">
                     </div>
                     <ul class="menu-lv-2 d-none">
                         <li><a href="#" title="Nhẫn">Nhẫn</a></li>
+                        <li><a href="#" title="Đồng hồ">Đồng hồ</a></li>
                         <li><a href="#" title="Dây chuyền">Dây chuyền</a></li>
                         <li><a href="#" title="Bông tai">Bông tai</a></li>
                         <li><a href="#" title="Lắc">Lắc</a></li>
@@ -62,7 +64,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
             </ul>
         </div>
         <div class="brand-name">
-            <h1 class="font-size-h1 m-0 font-playfair-display text-nowrap p-0-16px cursor-pointer">MIKI JEWELRY</h1>
+            <h1 class="font-size-h1 m-0 font-playfair-display text-nowrap p-0-16px cursor-pointer" onclick="goToHomePage()">MIKI JEWELRY</h1>
         </div>
         <div class="tool h-40px w-35 d-flex justify-content-between align-self-end position-absolute">
             <div class="search h-100 w-70">

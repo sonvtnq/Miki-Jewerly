@@ -8,23 +8,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../CSS/common.css">
-
+    <link rel="stylesheet" href="../CSS/products.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
-    <header>
-
+    <header id="header">
+        <script src="./header.js"></script>
     </header>
-    <section>
-        
+    <section id="zone1" class="w-100">
+        <div class="banner">
+            <img src="../Images/product-banner.png" alt="product-banner">
+        </div>
     </section>
-    <footer>
-        
+    <section id="zone2" class="m-0-auto">
+        <div class="link d-flex">
+            <p>Sản phẩm</p>
+            <div class="img-link w-9px">
+                <img src="../Images/icon/product-link.jpg" alt="img-link">
+            </div>
+            <p class="font-w700">Bông tai</p>
+        </div>
+        <div>
+            <div class="head d-flex justify-content-between align-items-center">
+                <h3 class="font-w700">Danh mục sản phẩm</h3>
+                <div class="sort-bar d-flex justify-content-between align-items-center">
+                    <p class="font-w700">Sắp xếp theo</p>
+                    <div class="icon w-16px">
+                        <img src="../Images/icon/icon-mui-ten-xuong.png" alt="icon">
+                    </div>
+                </div>
+                <div class="m-sort-bar d-none">
+                    <div class="img-m-sort w-40px">
+                        <img src="../Images/icon/m-sort-bar-removebg-preview.png" alt="m-sort-bar">
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <!-- Các sản phẩm hiện ở đây -->
+            </div>
+            <div class="foot d-flex justify-content-end">
+                <div class="page-navigation d-flex">
+                    <div class="page-prev">
+                        <div class="number-page w-40px h-40px d-flex justify-content-center align-items-center" onclick="pagePrev()">
+                            <p class="font-w700" ><span><</span></p>
+                        </div>
+                    </div>
+                    <div class="page-number d-flex">
+                        <!-- page hiện ở đây -->
+                    </div>
+                    <div class="page-next">
+                        <div class="number-page w-40px h-40px d-flex justify-content-center align-items-center" onclick="pageNext()">
+                            <p class="font-w700" >></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <script src="./footer.js"></script>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="../JS/common.js"></script>
-    
+    <script src="../JS/products.js"></script>
 </body>
 </html>
