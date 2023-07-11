@@ -1,4 +1,4 @@
-var header=`<div class="header d-flex flex-column justify-content-center m-0-auto">
+var header=` <div class="header d-flex flex-column justify-content-center m-0-auto">
 <div class="background-sidebar position-fixed d-none" id="sidebarMenu">
     <div class="icon-close w-40px position-absolute" onclick="closeSidebarMenu()">
         <img src="../Images/icon/icon-close.png" alt="icon-close">
@@ -16,9 +16,18 @@ var header=`<div class="header d-flex flex-column justify-content-center m-0-aut
             <li><a href="#" title="Trang chủ">Trang chủ</a></li>
             <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
             <li><a href="#" title="Bộ sưu tập">Bộ sưu tập</a></li>
-            <li>
+            <li class="d-flex justify-content-center position-relative">
                 <a href="#" title="Sản phẩm">Sản phẩm</a>
+                <div class="muitenxuong w-12px" style="margin-left: 3%;">
+                    <img src="../Images/icon/icon-mui-ten-xuong.png" alt="">
+                </div>
+                <input type="checkbox" name="ckbMenuLV2" id="ckbMenuLV2">
             </li>
+            <li class="menu-lv2"><a href="#" title="Nhẫn">Nhẫn</a></li>
+            <li class="menu-lv2"><a href="#" title="Dây chuyền">Dây chuyền</a></li>
+            <li class="menu-lv2"><a href="#" title="Bông tai">Bông tai</a></li>
+            <li class="menu-lv2"><a href="#" title="Lắc">Lắc</a></li>
+            <li class="menu-lv2"><a href="#" title="Xem tất cả">Xem tất cả</a></li>
             <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
             <li><a href="./login.html" title="Đăng nhập">Đăng nhập</a></li>
         </ul>

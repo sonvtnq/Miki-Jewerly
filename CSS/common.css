@@ -261,6 +261,12 @@ li{
             width: 100%;
             padding: 1.5rem 1rem;
             background-color: #fff9f6;
+            &:hover{
+                scale: 1;
+                & a{
+                    color: #272727;
+                }
+            }
         }
         >.menu-lv2{
             background-color: rgba(255, 240, 240, 1);

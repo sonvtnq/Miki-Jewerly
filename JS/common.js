@@ -178,7 +178,9 @@ function closeSidebarMenu(){
     $('body').removeClass('overflow-hide');
 }
 
-$(document).ready(function() {
+//Hàm mở side bar menu - sản phẩm
+$(document).ready(
+    function(){
     $('#ckbMenuLV2').change(function() {
       if ($(this).is(':checked')) {
         $('.menu-lv2').addClass('d-block');
