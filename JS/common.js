@@ -178,6 +178,17 @@ function closeSidebarMenu(){
     $('body').removeClass('overflow-hide');
 }
 
+$(document).ready(function() {
+    $('#ckbMenuLV2').change(function() {
+      if ($(this).is(':checked')) {
+        $('.menu-lv2').addClass('d-block');
+      } else {
+        $('.menu-lv2').removeClass('d-block');
+      }
+    });
+  });
+
+
 //Hàm mở search
 function focusSearch(){
     $('.search').addClass('search-focus');

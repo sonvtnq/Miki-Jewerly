@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miki Jewelry - Products</title>
+    <link rel="icon" href="../Images/icon/logo-miki.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css" integrity="sha512-rXhL8a+X3wTosWn2Zgd/5L8rfWrpff7qdOnl7Wg1n2zHk8lHGhiSujoyxoKw1nf43kZAzJoe0Z0ymr2Kkku7lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../CSS/common.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <header id="header">
+        <div class="header d-flex flex-column justify-content-center m-0-auto">
+            <div class="background-sidebar position-fixed d-none" id="sidebarMenu">
+                <div class="icon-close w-40px position-absolute" onclick="closeSidebarMenu()">
+                    <img src="../Images/icon/icon-close.png" alt="icon-close">
+                </div>
+                <div class="sidebar-menu">
+                    <div class="sidebar-search w-80 m-0-auto">
+                        <form action="" method="post" class="search position-relative h-100">
+                            <input type="text" name="search" id="search" class=" h-100 p-8px-16px w-100" style="border-radius: 16px;" placeholder="Tìm kiếm">
+                            <div class="icon-search w-24px position-absolute cursor-pointer">
+                                <img src="../Images/icon/icon-search.png" alt="icon-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul>
+                        <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+                        <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
+                        <li><a href="#" title="Bộ sưu tập">Bộ sưu tập</a></li>
+                        <li class="d-flex justify-content-center position-relative">
+                            <a href="#" title="Sản phẩm">Sản phẩm</a>
+                            <div class="muitenxuong w-12px" style="margin-left: 3%;">
+                                <img src="../Images/icon/icon-mui-ten-xuong.png" alt="">
+                            </div>
+                            <input type="checkbox" name="ckbMenuLV2" id="ckbMenuLV2">
+                        </li>
+                        <li class="menu-lv2"><a href="#" title="Nhẫn">Nhẫn</a></li>
+                        <li class="menu-lv2"><a href="#" title="Dây chuyền">Dây chuyền</a></li>
+                        <li class="menu-lv2"><a href="#" title="Bông tai">Bông tai</a></li>
+                        <li class="menu-lv2"><a href="#" title="Lắc">Lắc</a></li>
+                        <li class="menu-lv2"><a href="#" title="Xem tất cả">Xem tất cả</a></li>
+                        <li><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
+                        <li><a href="./login.html" title="Đăng nhập">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-row w-100 d-flex justify-content-center">
+                <div class="logo-miki w-40px">
+                    <img src="../Images/icon/logo-miki.png" alt="logo-miki">
+                </div>
+            </div>
+            <div class="header-row w-100 position-relative">
+                <div class="nav-bar d-flex justify-content-center">
+                    <div class="menu w-35 align-items-end d-flex position-absolute">
+                        <div class="icon-menu d-none w-40px" onclick="openSidebarMenu()">
+                            <img src="../Images/icon/icon-menu.png" alt="icon-menu">
+                        </div>
+                        <ul class="menu-lv-1 d-flex list-unstyled justify-content-between w-100">
+                            <li><a href="#" title="Trang chủ" class="home-page-title">Trang chủ</a></li>
+                            <li>
+                                <a href="#" title="Sản phẩm" class="products-title">Sản phẩm</a>
+                                <div class="icon-muitenxuong w-12px">
+                                    <img src="../Images/icon/icon-mui-ten-xuong.png" alt="icon-mui-ten-xuong">
+                                </div>
+                                <ul class="menu-lv-2 d-none">
+                                    <li><a href="#" title="Nhẫn">Nhẫn</a></li>
+                                    <li><a href="#" title="Dây chuyền">Dây chuyền</a></li>
+                                    <li><a href="#" title="Bông tai">Bông tai</a></li>
+                                    <li><a href="#" title="Lắc">Lắc</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="Về chúng tôi" class="about-us-title">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand-name">
+                        <h1 class="font-size-h1 m-0 font-playfair-display text-nowrap p-0-16px cursor-pointer">MIKI JEWELRY</h1>
+                    </div>
+                    <div class="tool h-40px w-35 d-flex justify-content-between align-self-end position-absolute">
+                        <div class="search h-100 w-70">
+                            <div class="icon-close-search w-40px position-absolute d-none" onclick="blurSearch()">
+                                <img src="../Images/icon/icon-close.png" alt="icon-close">
+                            </div>
+                            <form action="" method="post" class="searchBar position-relative h-100 w-100">
+                                <input type="text" name="search" id="search" class="search-bar h-100 p-8px-16px w-100" placeholder="Tìm kiếm" onfocus="focusSearch()">
+                                <div class="icon-search w-24px position-absolute cursor-pointer d-flex align-items-center" onclick="focusSearch()">
+                                    <img src="../Images/icon/icon-search.png" alt="icon-search">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="icon-basket w-32px d-flex align-items-center">
+                            <img src="../Images/icon/icon-basket.png" alt="icon-basket" class="cursor-pointer icon-hover">
+                        </div>
+                        <div class="icon-user w-32px d-flex align-items-center" onclick="goToLogin()">
+                            <img src="../Images/icon/icon-user.png" alt="icon-user"  class="cursor-pointer icon-hover">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+    </header>
+    <section>
+        
+    </section>
+    <footer>
+        
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../JS/common.js"></script>
+    
+</body>
+</html>
