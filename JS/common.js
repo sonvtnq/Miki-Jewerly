@@ -211,8 +211,7 @@ function getProductById(ID){
 } 
 
 //Hàm hiện ra giá tiền
-function price(obj){
-    var itemPrice = obj.price;
+function price(itemPrice){
     itemPrice = itemPrice.toString()
     var l= itemPrice.length;
     var price='';
@@ -247,7 +246,7 @@ function setProduct(obj){
                 </div>
                 <div class="detail">
                     <p class="font-w700">${obj.name}</p>
-                    <p style="color: #92715A;" class="font-w700">${price(obj)}</p>
+                    <p style="color: #92715A;" class="font-w700">${price(obj.price)}</p>
                     <div class="button btn-black w-100" onclick="addToBasket(${obj.id})">
                         <p>Thêm vào giỏ hàng </p>
                     </div>
@@ -270,29 +269,30 @@ function setProductInBasket(obj){
                         <div class="item-color">
                             <p>Màu sắc: Sliver</p>
                         </div>
-                        <div class="icon-close">
+                        <div class="icon-close-basket">
                             <div class="w-32px">
-                                <img src="../Images/icon/icon-close.png" alt="icon-close">
+                                <img src="../Images/icon/icon-close.png" alt="icon-close" onclick="removeFromBasket(${obj.id})" >
                             </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <div class="quantity d-flex">
-                            <div class="minus d-flex align-items-center" onclick="quantityDecrease()">
+                        <div class="quantity-bar d-flex">
+                            <div class=" minus d-flex align-items-center" onclick="quantityDecrease('quantityId${obj.id}')">
                                 <img src="../Images/icon/icon-minuss.jpg" alt="minus">
                             </div>
-                            <input type="number" name="quantity" id="quantity" step="1" value="1">
-                            <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease()">
+                            <input type="number" name="quantity" id="quantityId${obj.id}" step="1" value="1">
+                            <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease('quantityId${obj.id}')">
                                 <img src="../Images/icon/icon-plus.png" alt="plus">
                             </div>
                         </div>
                         <div class="price-item">
-                            <p class="item-price font-w700">${obj.price}</p>
+                            <p class="item-price font-w700">${price(obj.price)}</p>
                         </div>
                     </div>
                     
                 </div>
             </div>`
+    
     $('.products').append(view);
 }
 
@@ -300,9 +300,9 @@ function setProductInBasket(obj){
 var basket = [];
 
 //Kiểm tra xem sản phẩm có trong giỏ hàng hay chưa
-function isInBasket(productID){
-    for(var i=0;i<basket.length;i++){
-        if(basket[i]==productID){
+function isInBasket(arr,productID){
+    for(var i=0;i<arr.length;i++){
+        if(arr[i]==productID){
             return true;
         }
     }
@@ -325,7 +325,7 @@ function addToBasket(productID) {
   var basketJson = sessionStorage.getItem('basket');
   var basket = JSON.parse(basketJson);
 
-  if(isInBasket(productID)){
+  if(isInBasket(basket,productID)){
     alert("Sản phẩm đã tồn tại trong giỏ hàng rồi !");
   }
   else{
@@ -339,6 +339,7 @@ function addToBasket(productID) {
   var updatedBasketJson = JSON.stringify(basket);
   sessionStorage.setItem('basket', updatedBasketJson);
 }
+  
 
 //Hàm mở menu con
 function openSidebarMenu(){
@@ -382,18 +383,16 @@ function blurSearch(){
 }
 
 //Hàm tăng giảm số lượng
-function quantityIncrease(){
-    var quantityCurent=document.getElementById('quantity');
-    var quantity=document.getElementById('quantity').value;
-    quantity=parseInt(quantity);
-    quantityCurent.value=quantity+1;
+function quantityIncrease(id) {
+    var quantityCurrent = $("#" + id);
+    var quantityValue = parseInt(quantityCurrent.val());
+    quantityCurrent.val(quantityValue + 1);
 }
-function quantityDecrease(){
-    var quantityCurent=document.getElementById('quantity');
-    var quantity=document.getElementById('quantity').value;
-    quantity=parseInt(quantity);
-    if(quantity>0){
-        quantityCurent.value=quantity-1;
+function quantityDecrease(id){
+    var quantityCurrent = $("#" + id);
+    var quantityValue = parseInt(quantityCurrent.val());
+    if(quantityValue>0){
+        quantityCurrent.val(quantityValue - 1);
     }else{
         quantityCurent.value=0;
     }
@@ -443,8 +442,6 @@ function goToBracelet() {
 }
 
 function goToBasket(){
-    if (!window.location.href.includes('basket.html')) {
-        window.location.href = './basket.html'
-    }
+    window.location.href = './basket.html'
 }
 

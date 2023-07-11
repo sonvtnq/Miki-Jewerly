@@ -21,6 +21,18 @@ section{
         }
     }
     .content{
+        & h3{
+            padding: 1rem 0;
+        }
+        .basket{
+            .products{
+                /* max-height: 1000px; */
+                /* overflow-y: auto; */
+                >p{
+                    padding: 1rem 0;
+                }
+            }
+        }
         .bill-temporary{
             .gift{
                 padding: 3rem 0;
@@ -53,5 +65,34 @@ section{
                 }
             }
         }
+    }
+}
+.d-block{
+    display: block !important;
+}
+@media only screen and (max-width: 991.98px){
+    section{
+        .gift input{
+            width: 75% !important;
+        }
+    }
+}
+@media only screen and (max-width: 767.98px){
+    section{
+        .content{
+            .basket{
+                width: 100% !important;
+            }
+            .bill-temporary{
+                padding-top: 3rem;
+                width: 100% !important;
+            }
+        }
+    }
+    #footer{
+        padding-top: 3rem;
+    }
+    .footer{
+        margin-top: 0 !important;
     }
 }

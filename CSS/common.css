@@ -550,13 +550,13 @@ input[type=number]::-webkit-outer-spin-button {
                 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
             }
         }
-        .icon-close{
+        .icon-close-basket{
             cursor: pointer;
             position: absolute;
             top: 2%;
             right: 1%;
         }
-        .quantity{
+        .quantity-bar{
             .minus{
                 width: 20px;
                 margin-right: .5rem;
