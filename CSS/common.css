@@ -462,7 +462,7 @@ input{
 }
 .button{
     position: relative;
-    display: inline-block !important;
+    display: flex;
     border-radius: 8px ;
     line-height: 24px;
     overflow: hidden;

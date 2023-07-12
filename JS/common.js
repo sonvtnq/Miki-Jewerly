@@ -47,8 +47,8 @@ function price(itemPrice){
 
 //Hàm hiện ra product item
 function setProduct(obj){
-    var display;
-    var addDisplay;
+    var display='d-block';
+    var addDisplay='d-none';
     if(isInBasket(basket,obj.id)){
         display = 'd-none'
         addDisplay ='b-block'
@@ -153,6 +153,7 @@ function addToBasket(productID) {
     
     $(`.btn-product-${productID}`).addClass('d-none');
     $(`.btn-product-${productID}`).removeClass('d-block');
+    $(`.added-product-${productID}`).removeClass('d-none');
     $(`.added-product-${productID}`).addClass('d-block');
 
     // Cập nhật giỏ hàng trong sessionStorage

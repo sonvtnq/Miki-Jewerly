@@ -717,7 +717,7 @@
     }
     .button{
         width: 100%;
-        display: flex !important;
+        /* display: flex !important; */
         justify-content: center;
     }
     #zone2{
