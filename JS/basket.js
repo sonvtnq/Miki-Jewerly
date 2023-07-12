@@ -19,11 +19,11 @@ var shipPrice=30000;
 var giftPrice=199000;
 
 function printBill(listID){
-    debugger;
     var sumItemPriceNumber= sumItemPrice(listID);
     if(basket.length==0){
         $('.products').html('');
         $('.products').text('Không có sản phẩm nào trong giỏ hàng !');
+        $('.bill-temporary').html('');
         shipPrice=0;
         giftPrice=0;
     }else{
