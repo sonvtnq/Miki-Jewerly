@@ -14,7 +14,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
         </div>
         <ul>
             <li><a onclick="goToHomePage()" href="#" title="Trang chủ">Trang chủ</a></li>
-            <li><a href="./about-us.html" title="Về chúng tôi">Về chúng tôi</a></li>
+            <li><a onclick="goToAboutUs()" href="#" title="Về chúng tôi">Về chúng tôi</a></li>
             <li class="d-flex justify-content-center position-relative">
                 <a href="#" title="Sản phẩm">Sản phẩm</a>
                 <div class="muitenxuong w-12px" style="margin-left: 3%;">
@@ -59,7 +59,7 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
                         <li onclick="goToBracelet()"><a href="#" title="Lắc">Lắc</a></li>
                     </ul>
                 </li>
-                <li><a href="./about-us.html" title="Về chúng tôi" class="about-us-title">Về chúng tôi</a></li>
+                <li><a onclick="goToAboutUs()" href="#" title="Về chúng tôi" class="about-us-title">Về chúng tôi</a></li>
             </ul>
         </div>
         <div class="brand-name">

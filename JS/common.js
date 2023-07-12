@@ -282,6 +282,15 @@ function goToBracelet() {
     window.location.href = './products.html'
 }
 
+function goToAboutUs(){
+    sessionStorage.setItem('about-us', 'brand&history');
+    window.location.href = './about-us.html'
+}
+function goToAboutUsRecruit(){
+    sessionStorage.setItem('about-us', 'recruit');
+    window.location.href = './about-us.html'
+}
+
 function goToBasket(){
     window.location.href = './basket.html'
 }

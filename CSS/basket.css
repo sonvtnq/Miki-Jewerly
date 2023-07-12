@@ -18,6 +18,10 @@ section{
         >p{
             margin: 0 !important;
             padding: 0 .5rem;
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
         }
     }
     .content{

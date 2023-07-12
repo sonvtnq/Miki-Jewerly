@@ -1,7 +1,9 @@
+footer,header{
+    background:none !important;
+}
 #link{
     .link{
         padding: 16px 0;
-        margin-bottom: 2rem;
         >p{
             margin: 0 !important;
             padding: 0 .5rem;
@@ -12,6 +14,7 @@
     max-width: none !important;
     position: relative;
     overflow: hidden;
+    margin-top: 2rem;
     &:hover .banner img{
         scale: 1.1;
     }
@@ -53,6 +56,38 @@
         }
     }
 }
+#zone3{
+    .title{
+        >h2{
+            padding: 2.5rem 0;
+            font-size: 2rem;
+        }
+    }
+    .detail{
+        .row-list{
+            .img{
+                display: flex;
+                align-items: center;
+                margin-right: .5rem;
+            }
+        }
+        
+        & p{
+            padding: 1rem 0;
+        }
+    }
+}
+.prev, .next{
+    .button{
+        background-color: rgba(0,0,0,0.2);
+        margin-top: 2rem     ;
+        border-radius: 0;
+        >p{
+            padding: .2rem 4rem !important;
+        }
+    }
+}
+
 .footer{
     margin-top: 60px !important;
 }
@@ -66,6 +101,26 @@
     z-index: 0;
     background-color: none;
     overflow: hidden;
+    .tron1 {
+        width: 20%; 
+        padding-bottom: 20%; 
+        background-color: rgba(183, 141, 113, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-40%,-45%);
+    }
+    .tron1 .tron1-{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(183, 141, 113, 0.1);
+    }
     .tron2 {
         width: 38.2%; 
         padding-bottom: 38.2%; 
@@ -87,14 +142,14 @@
         background-color: rgba(183, 141, 113, 0.1);
     }
     .tron3 {
-        width: 38.2%; 
-        padding-bottom: 38.2%; 
+        width: 30%; 
+        padding-bottom: 30%; 
         background-color: rgba(183, 141, 113, 0.15);
         border-radius: 50%;
         position: absolute;
-        bottom: 50%;
+        bottom: 30%;
         right: -5%;
-        transform: translate(50%,50%);
+        transform: translate(60%,50%);
     }
     .tron3 .tron3-{
         width: 80%;

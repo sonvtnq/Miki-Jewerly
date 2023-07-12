@@ -57,9 +57,9 @@ var footer=`<div class="footer m-0-auto mt-120px">
         <div class="col2-col">
             <p class="font-w700 font-playfair-display font-size-1-25">Về chúng tôi</p>
             <ul>
-                <li class="p-8px"><a href="./about-us.html" title="Thương hiệu">Thương hiệu</a></li>
-                <li class="p-8px"><a href="./about-us.html" title="Lịch sử">Lịch sử</a></li>
-                <li class="p-8px"><a href="./about-us.html" title="Tuyển dụng">Tuyển dụng</a></li>
+                <li class="p-8px"><a onclick="goToAboutUs()" href="#" title="Thương hiệu">Thương hiệu</a></li>
+                <li class="p-8px"><a onclick="goToAboutUs()" href="#" title="Lịch sử">Lịch sử</a></li>
+                <li class="p-8px"><a onclick="goToAboutUsRecruit()" href="#" title="Tuyển dụng">Tuyển dụng</a></li>
             </ul>
         </div>
         <div class="col2-col">

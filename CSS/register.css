@@ -1,5 +1,9 @@
 header{
     height: 128px;
+    background: none !important;
+}
+footer{
+    background: none !important;
 }
 .section{
     z-index: 1;
@@ -131,7 +135,7 @@ section a{
         border-radius: 50%;
         position: absolute;
         bottom: 0;
-        right: 70%;
+        right: 0;
         transform: translate(50%,65%);
     }
     .tron3 .tron3-{
@@ -232,7 +236,7 @@ section a{
 /* // `sm` applies to x-small devices (L phones, less than 576px) */
 @media  only screen and (max-width: 575.98px) { 
     header{
-        height: 80px;
+        height:80px;
     }
     section{
         .head{
