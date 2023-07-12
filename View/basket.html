@@ -38,9 +38,10 @@
                         <h3 class="font-w700">Tạm tính</h3>
                     </div>
                     <div class="bill-temporary-detail">
-                        <div class="gift d-flex justify-content-between w-100 align-items-center">
+                        <div class="gift d-flex justify-content-between w-100 align-items-center position-relative">
                             <p class="font-w700">Ưu đãi</p>
-                            <input type="text" name="gift" id="gift" placeholder="Nhập ưu đãi">
+                            <input type="text" name="gift" id="giftCode" placeholder="Nhập ưu đãi" onblur="giftCode()" value="">
+                            <p class="alert-gift d-none">Mã giảm giá không hợp lệ !</p>
                         </div>
                         <div class="bill d-flex flex-column">
                             <div class="bill-row d-flex justify-content-between">
@@ -51,8 +52,9 @@
                                 <p>Phí giao hàng</p>
                                 <p class="ship-price font-w700 price"></p>
                             </div>
-                            <div class="bill-row d-flex justify-content-between">
-                                <p>Giảm giá</p>
+                            <div class="bill-row-gift bill-row d-flex justify-content-between">
+                                <p>Voucher</p>
+                                <p class="gift-label"></p>
                                 <p class="gift-price font-w700 price"></p>
                             </div>
                         </div>
@@ -76,7 +78,7 @@
         <script src="./footer.js"></script>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="../JS/data.js"></script>
     <script src="../JS/common.js"></script>
     <script src="../JS/basket.js"></script>
 </body>

@@ -45,13 +45,34 @@ section{
                     padding: .5rem 1rem;
                     background-color: #fff;
                 }
+                .alert-gift{
+                    font-size: 1rem;
+                    position: absolute;
+                    bottom: 15%;
+                    color: red;
+                    left: 20%;
+                }
             }
             .bill{
                 padding: 3rem 0;
                 border-bottom: 1px solid #D8D8D8;
                 .bill-row{
+                    position: relative;
                     padding: 1rem 0;
-
+                    >p{
+                        display: flex;
+                        align-items: center;
+                    }
+                    >.gift-label{
+                        background-color: #fff9f6;
+                        padding: .5rem 1rem;
+                        position: absolute;
+                        display: block;
+                        left: 5rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2)!important;
+                    }
                 }
                 .price{
                     font-size: 1.25rem;
@@ -75,6 +96,12 @@ section{
         .gift input{
             width: 75% !important;
         }
+        .gift{
+            .alert-gift{
+                left: 25%;
+            }
+        }
+        
     }
 }
 @media only screen and (max-width: 767.98px){

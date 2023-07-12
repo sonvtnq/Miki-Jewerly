@@ -1,6 +1,7 @@
 $('.products-title').addClass('font-w700');
 
 for(var i=0;i<listProduct.length;i++){
+    debugger;
     setProduct(listProduct[i]);
 }
 

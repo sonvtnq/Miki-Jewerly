@@ -1,3 +1,4 @@
+//Hàm in ra các sản phẩm trong giỏ hàng được lưu bằng id trong sessionStorage
 function setProductInBasketPage(listID){
     $('.products').html('');
     for(var i=0;i<listID.length;i++){
@@ -5,6 +6,7 @@ function setProductInBasketPage(listID){
     }
 }
 
+//Hàm tính tống giá của các sản phẩm
 function sumItemPrice(listID){
     var sumItemPriceNumber=0;
     for(var i=0;i<listID.length;i++){
@@ -14,24 +16,54 @@ function sumItemPrice(listID){
     return sumItemPriceNumber;
 }
 
-
+//Hàm giftcode
 var shipPrice=30000;
-var giftPrice=199000;
+var giftPrice=0;
+function giftCode(){
+    // debugger;
+    giftPrice=0;
+    var giftCode = $('#giftCode').val();
+    for(var i=0;i<listGiftCode.length;i++){
+        if(giftCode==listGiftCode[i].id){
+            giftPrice= listGiftCode[i].value;
+            $('.alert-gift').removeClass('d-block')
+            $('.gift-label').text(`${listGiftCode[i].id}`)
+            printBill(basket);
+            return;
+        }
+    }
+    if (giftCode!=''){
+        $('.alert-gift').addClass('d-block')
+    }else{
+        $('.alert-gift').removeClass('d-block')
+    }
+    printBill(basket);
+}
 
+//Hàm in tiền trong hóa đơn tạm thời
 function printBill(listID){
+    console.log(giftPrice);
     var sumItemPriceNumber= sumItemPrice(listID);
     if(basket.length==0){
         $('.products').html('');
         $('.products').text('Không có sản phẩm nào trong giỏ hàng !');
         $('.bill-temporary').html('');
-        shipPrice=0;
-        giftPrice=0;
     }else{
         setProductInBasketPage(listID);
     }
     $('.sum-item-price').text(price(sumItemPriceNumber))
     $('.ship-price').text(price(shipPrice))
-    $('.gift-price').text("- "+price(giftPrice))
+
+    if(giftPrice>0 && giftPrice <1){
+        giftPrice=giftPrice*sumItemPriceNumber;
+    }
+    if(giftPrice!=0){
+        $('.bill-row-gift').removeClass('d-none')
+        $('.gift-price').text("- "+price(giftPrice))
+    }else{
+        $('.bill-row-gift').addClass('d-none')
+    }
+    
     if(sumItemPriceNumber+shipPrice-giftPrice < 0){
         $('.sum-price').text(price(0))  
     }else{
@@ -40,6 +72,7 @@ function printBill(listID){
     
 }
 
+//hàm xóa sản phẩm khỏi giỏ hàng (xóa id sản phẩm được lưu ở sessionStorage)
 function removeFromBasket(productID) {
     // Lấy giỏ hàng từ sessionStorage
     var basketJson = sessionStorage.getItem('basket');

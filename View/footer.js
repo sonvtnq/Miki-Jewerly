@@ -57,16 +57,16 @@ var footer=`<div class="footer m-0-auto mt-120px">
         <div class="col2-col">
             <p class="font-w700 font-playfair-display font-size-1-25">Về chúng tôi</p>
             <ul>
-                <li class="p-8px"><a href="#" title="Thương hiệu">Thương hiệu</a></li>
-                <li class="p-8px"><a href="#" title="Lịch sử">Lịch sử</a></li>
-                <li class="p-8px"><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+                <li class="p-8px"><a href="./about-us.html" title="Thương hiệu">Thương hiệu</a></li>
+                <li class="p-8px"><a href="./about-us.html" title="Lịch sử">Lịch sử</a></li>
+                <li class="p-8px"><a href="./about-us.html" title="Tuyển dụng">Tuyển dụng</a></li>
             </ul>
         </div>
         <div class="col2-col">
             <p class="font-w700 font-playfair-display font-size-1-25">Tài khoản</p>
             <ul>
                 <li class="p-8px"><a href="#" title="Lịch sử mua hàng">Lịch sử mua hàng</a></li>
-                <li class="p-8px"><a href="#" title="Giỏ hàng">Giỏ hàng</a></li>
+                <li class="p-8px"><a onclick="goToBasket()" href="#" title="Giỏ hàng">Giỏ hàng</a></li>
                 <li class="p-8px"><a href="#" title="Thông tin">Thông tin</a></li>
             </ul>
         </div>

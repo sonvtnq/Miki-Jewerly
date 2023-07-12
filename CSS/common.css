@@ -8,8 +8,13 @@ html,body{
     font-family: 'Montserrat';
     color:#272727;
 }
-header,footer{
-    z-index: 10 ;
+header{
+    position: relative;
+    z-index: 10;
+    background-color: #fff9f6 !important;
+}
+footer{
+    z-index: 10;
     background-color: #fff9f6 !important;
     position: relative;
 }
@@ -34,6 +39,9 @@ img{
 }
 .w-85{
     width: 85%;
+}
+.w-47{
+    width: 47%;
 }
 .brand-name{
     color: #272727;
@@ -517,6 +525,9 @@ input{
             padding: 8px 0 !important;
         }
     }
+    .added{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
     &:hover .img{
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
         transition: all 0.25s;
@@ -584,6 +595,15 @@ input[type=number]::-webkit-outer-spin-button {
             color: #92715A;
         }
     }
+}
+.cursor-default{
+    cursor: default;
+}
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
 }
 
 @media only screen and (min-width: 1440px) { 
