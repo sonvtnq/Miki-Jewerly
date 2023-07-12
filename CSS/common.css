@@ -462,7 +462,7 @@ input{
 }
 .button{
     position: relative;
-    display: flex;
+    display: inline-flex;
     border-radius: 8px ;
     line-height: 24px;
     overflow: hidden;
@@ -844,6 +844,10 @@ input[type=number]::-webkit-outer-spin-button {
     .f-zone1 .social-icon{
         height: 32px !important;
         width: 240px !important;
+        .icon-social{
+            width: auto !important;
+            height: 100% !important;
+        }
     }
     .f-zone1 .f-row > form{
         width: 280px !important;
