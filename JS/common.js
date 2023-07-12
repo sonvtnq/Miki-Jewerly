@@ -261,7 +261,7 @@ function setProduct(obj){
 //hàm hiện ra product item ở trong giỏ hàng
 function setProductInBasket(obj){
     var quantityValue = sessionStorage.getItem(`quantityId${obj.id}`);
-    var view=`<div class="item-product-${obj.id} item-product-row d-flex justify-content-between">
+    var view=`<div class="product-${obj.id} item-product-row d-flex justify-content-between">
                 <div class="img w-25 position-relative">
                     <img src="${obj.img}" alt="${obj.name}">
                 </div>
@@ -400,7 +400,7 @@ function quantityIncrease(quantityId,productID) {
     var lastPrice=price(pri);
     $(`.item-price-${productID}`).text(lastPrice);
     
-    printBill()
+    printBill(basket)
 
 }
 function quantityDecrease(quantityId,productID){
@@ -419,6 +419,7 @@ function quantityDecrease(quantityId,productID){
     var lastPrice=price(pri);
     $(`.item-price-${productID}`).text(lastPrice);
     
+    printBill(basket)
 }
 
 

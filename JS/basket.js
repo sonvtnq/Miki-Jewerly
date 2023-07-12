@@ -1,16 +1,15 @@
-function setProductInBasketPage(){
+function setProductInBasketPage(listID){
     $('.products').html('');
-    for(var i=0;i<basket.length;i++){
-        setProductInBasket(getProductById(basket[i]))
-        sumItemPrice+=getProductById(basket[i]).price;
+    for(var i=0;i<listID.length;i++){
+        setProductInBasket(getProductById(listID[i]))
     }
 }
 
-function sumItemPrice(){
+function sumItemPrice(listID){
     var sumItemPriceNumber=0;
-    for(var i=0;i<basket.length;i++){
-        var quantityValue = sessionStorage.getItem(`quantityId${basket[i]}`);
-        sumItemPriceNumber+=getProductById(basket[i]).price * quantityValue;
+    for(var i=0;i<listID.length;i++){
+        var quantityValue = sessionStorage.getItem(`quantityId${listID[i]}`);
+        sumItemPriceNumber+=getProductById(listID[i]).price * quantityValue;
     }
     return sumItemPriceNumber;
 }
@@ -19,20 +18,22 @@ function sumItemPrice(){
 var shipPrice=30000;
 var giftPrice=199000;
 
-function printBill(){
-    var sumItemPriceNumber= sumItemPrice();
+function printBill(listID){
+    debugger;
+    var sumItemPriceNumber= sumItemPrice(listID);
     if(basket.length==0){
-        $('.alert-products').addClass('d-block');
+        $('.products').html('');
+        $('.products').text('Không có sản phẩm nào trong giỏ hàng !');
         shipPrice=0;
         giftPrice=0;
     }else{
-        setProductInBasketPage();
+        setProductInBasketPage(listID);
     }
     $('.sum-item-price').text(price(sumItemPriceNumber))
     $('.ship-price').text(price(shipPrice))
     $('.gift-price').text("- "+price(giftPrice))
     if(sumItemPriceNumber+shipPrice-giftPrice < 0){
-        $('.sum-price').text(price(0))
+        $('.sum-price').text(price(0))  
     }else{
         $('.sum-price').text(price(sumItemPriceNumber+shipPrice-giftPrice))
     }
@@ -40,13 +41,12 @@ function printBill(){
 }
 
 function removeFromBasket(productID) {
-    // debugger;
     // Lấy giỏ hàng từ sessionStorage
     var basketJson = sessionStorage.getItem('basket');
-    var basket = JSON.parse(basketJson);
+    var listID = JSON.parse(basketJson);
   
     // Tạo một mảng mới chứa các sản phẩm cần giữ lại trong giỏ hàng
-    var updatedBasket = basket.filter(function(item) {
+    var updatedBasket = listID.filter(function(item) {
       return item !== productID;
     });
   
@@ -54,9 +54,11 @@ function removeFromBasket(productID) {
     var updatedBasketJson = JSON.stringify(updatedBasket);
     sessionStorage.setItem('basket', updatedBasketJson);
     
-    $(`.item-product-${productID}`).addClass('d-none');
+    basket=updatedBasket;
+    printBill(basket);
+
 }
-printBill();
+printBill(basket);
 
 
 
