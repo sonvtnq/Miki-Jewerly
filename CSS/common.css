@@ -10,11 +10,11 @@ html,body{
 }
 header{
     position: relative;
-    z-index: 10;
+    z-index: 15;
     background-color: #fff9f6 !important;
 }
 footer{
-    z-index: 10;
+    z-index: 3;
     background-color: #fff9f6 !important;
     position: relative;
 }
@@ -260,6 +260,9 @@ li{
     left: 0;
     bottom: .5rem;
 }
+.opacity-0{
+    opacity: 0 !important;
+}
 .tool{
     right: 0;
     bottom: 0;
@@ -274,6 +277,9 @@ li{
     background-color: rgba(255, 250, 250, 0.9);
     z-index: 100;
     overflow-y: auto;
+    & li{
+        z-index: 10;
+    }
     >ul{
         width: 100%;
         padding: 0;
@@ -598,12 +604,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cursor-default{
     cursor: default;
-}
-.d-none{
-    display: none !important;
-}
-.d-block{
-    display: block !important;
 }
 
 @media only screen and (min-width: 1440px) { 

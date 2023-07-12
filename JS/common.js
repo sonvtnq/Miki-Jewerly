@@ -47,7 +47,6 @@ function price(itemPrice){
 
 //Hàm hiện ra product item
 function setProduct(obj){
-    debugger
     var display;
     var addDisplay;
     if(isInBasket(basket,obj.id)){
@@ -165,11 +164,13 @@ function addToBasket(productID) {
 //Hàm mở menu con
 function openSidebarMenu(){
     $("#sidebarMenu").addClass("append");
-    $('body').addClass('overflow-hide');    
+    $('body').addClass('overflow-hide'); 
+    $('footer').addClass('opacity-0')   
 }
 function closeSidebarMenu(){
     $("#sidebarMenu").removeClass("append");
     $('body').removeClass('overflow-hide');
+    $('footer').removeClass('opacity-0')  
 }
 
 //Hàm mở side bar menu - sản phẩm
