@@ -16,20 +16,15 @@ function sumItemPrice(listID){
     return sumItemPriceNumber;
 }
 
-//Hàm giftcode
-var shipPrice=30000;
-var giftPrice=0;
-function giftCode(){
-    // debugger;
-    giftPrice=0;
+
+function checkGiftCode(){
     var giftCode = $('#giftCode').val();
     for(var i=0;i<listGiftCode.length;i++){
         if(giftCode==listGiftCode[i].id){
-            giftPrice= listGiftCode[i].value;
             $('.alert-gift').removeClass('d-block')
-            $('.gift-label').text(`${listGiftCode[i].id}`)
+            sessionStorage.setItem('gift-code', listGiftCode[i].id);
             printBill(basket);
-            return;
+            return true;
         }
     }
     if (giftCode!=''){
@@ -37,11 +32,32 @@ function giftCode(){
     }else{
         $('.alert-gift').removeClass('d-block')
     }
+    sessionStorage.setItem('gift-code','');
     printBill(basket);
+    return false;
+}
+
+//Hàm in giftcode
+var giftPrice=0;
+var shipPrice=30000;
+function printGiftCode(){
+    var giftCode = sessionStorage.getItem('gift-code');
+    for(var i=0;i<listGiftCode.length;i++){
+        if(giftCode==listGiftCode[i].id){
+            giftPrice= listGiftCode[i].value;
+            $('.alert-gift').removeClass('d-block')
+            $('.gift-label').text(`${listGiftCode[i].id}`)
+            return;
+        }
+    }
+    if (giftCode!=''){
+        giftPrice=0;
+    }
 }
 
 //Hàm in tiền trong hóa đơn tạm thời
 function printBill(listID){
+    printGiftCode();
     console.log(giftPrice);
     var sumItemPriceNumber= sumItemPrice(listID);
     if(basket.length==0){
@@ -90,6 +106,7 @@ function removeFromBasket(productID) {
     basket=updatedBasket;
     printBill(basket);
 
+    numInBasKet(basket)
 }
 printBill(basket);
 

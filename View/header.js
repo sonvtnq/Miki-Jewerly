@@ -79,6 +79,9 @@ var header=` <div class="header d-flex flex-column justify-content-center m-0-au
             </div>
             <div class="icon-basket w-32px d-flex align-items-center" onclick="goToBasket()">
                 <img src="../Images/icon/icon-basket.png" alt="icon-basket" class="cursor-pointer icon-hover">
+                <div class="number-product-in-basket">
+                    <p>1</p>
+                </div>
             </div>
             <div class="icon-user w-32px d-flex align-items-center" onclick="goToLogin()">
                 <img src="../Images/icon/icon-user.png" alt="icon-user"  class="cursor-pointer icon-hover">

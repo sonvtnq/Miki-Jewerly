@@ -1,0 +1,212 @@
+.footer{
+    margin-top: 60px !important;
+}
+p{
+    display: flex;
+    align-items: center;
+}
+section{
+    z-index: 0;
+    padding: 3rem 0;
+    & p{
+        margin-bottom: 0;
+    }
+    .link{
+        >p{
+            margin: 0 !important;
+            padding: 0 .5rem;
+            display: flex;
+            align-items: center;
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    .content{
+        .head{
+            margin-top: 2rem;
+        }
+        .detail{
+            padding: 2rem 0;
+            .payment{
+                .address{
+                    .title{
+                        color: #626262;
+                    }
+                    & input{
+                        border: 1px solid #6E5544 ;
+                        padding: .5rem 1rem;
+                        border-radius: 8px !important;
+                        margin: 2% 0;
+                    }
+                }
+                .paymentMethod{
+                    .title{
+                        color: #626262;
+                        padding: 1rem 0;
+                    }
+                    & input[type="checkbox"]{
+                        min-width: 44px;
+                        height: 20px;
+                        color: #000;
+                    }
+                    .table-payment{
+                        border: 1px solid #6E5544;
+                        border-radius: 8px;
+                        >input{
+                            width: 44px;
+                        }
+                        .cash{
+                            border-bottom: 1px solid #6E5544;
+                            padding: .5rem 0;
+                            >input{
+                                width: 44px;
+                            }
+                        }
+                        .credit-card-saved{
+                            border-bottom: 1px solid #6E5544;
+                            padding: .5rem 0;
+                            padding-right: .5rem;
+                        }
+                        .credit-card{
+                            padding: .5rem 0;
+                            padding-right: .5rem;
+                        }
+                        .credit{
+                            & input[type="text"],input[type="number"]{
+                                border: 1px solid #6E5544 ;
+                                padding: .5rem 1rem;
+                                border-radius: 8px !important;
+                                margin: 1rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .productBought{
+                background-image: url('../Images/background-payment.jpg');
+                background-size: 100% 100%;
+                .product{
+                    padding: 2rem 0;
+                    border-bottom: 1px solid #272727;
+                    .item-product-payment{
+                        text-align: start;
+                        padding: 0;
+                        padding: .5rem 0;
+                        margin: 0;
+                        .img{
+                            width: 15%;
+                            padding-bottom: 15%;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            & img{
+                                width: 100%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                        }
+                        .product-detail{
+                            & p{
+                                font-size: 1.25rem;
+                            }
+                            .item-color{
+                                & p{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .bill{
+                    padding: 2rem 0;
+                    border-bottom: 1px solid #272727;
+                    .bill-row{
+                        position: relative;
+                        padding: 1rem 0;
+                        >p{
+                            display: flex;
+                            align-items: center;
+                        }
+                        >.gift-label{
+                            background-color: #fff9f6;
+                            padding: .5rem 1rem;
+                            position: absolute;
+                            display: block;
+                            left: 5rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2)!important;
+                        }
+                    }
+                    .price{
+                        font-size: 1.25rem;
+                    }
+                }
+                .last-price{
+                    padding: 2rem 0;
+                    .sum-price{
+                        font-size: 1.5rem ;
+                    }
+                }
+            }
+        }
+        .foot{
+            padding: 1rem 0;
+            .button{
+                margin-right: 2rem;
+            }
+            .btn-white{
+                background-color: rgba(0,0,0,0.3);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:991.98px){
+    section{
+        .content{
+            .detail{
+                >.payment{
+                    width: 49%;
+                }
+                >.productBought{
+                    width: 48%;
+                    >div{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767.98px){
+    section{
+        .content{
+            .detail{
+                >.payment{
+                    width: 100%;
+                    margin-top: 10%;
+                }
+                >.productBought{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:425.98px){
+    section{
+        .foot{
+            width: 100% !important;
+            justify-content: space-between !important;
+            .button{
+                margin-right: 0 !important;
+            }
+        }
+    }
+}

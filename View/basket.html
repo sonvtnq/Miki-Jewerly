@@ -40,7 +40,7 @@
                     <div class="bill-temporary-detail">
                         <div class="gift d-flex justify-content-between w-100 align-items-center position-relative">
                             <p class="font-w700">Ưu đãi</p>
-                            <input type="text" name="gift" id="giftCode" placeholder="Nhập ưu đãi" onblur="giftCode()" value="">
+                            <input type="text" name="gift" id="giftCode" placeholder="Nhập ưu đãi" onblur="checkGiftCode()" value="">
                             <p class="alert-gift d-none">Mã giảm giá không hợp lệ !</p>
                         </div>
                         <div class="bill d-flex flex-column">
@@ -64,7 +64,7 @@
                                 <p class="sum-price font-w700"></p>
                             </div>
                             <div class="pt-5 d-flex justify-content-end">
-                                <div class="button btn-black">
+                                <div class="button btn-black" onclick="goToPaymentPage()">
                                     <p>Thanh toán</p>
                                 </div>
                             </div>

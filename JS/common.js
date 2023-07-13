@@ -104,7 +104,7 @@ function setProductInBasket(obj){
                             <div class=" minus d-flex align-items-center" onclick="quantityDecrease('quantityId${obj.id}',${obj.id})">
                                 <img src="../Images/icon/icon-minuss.jpg" alt="minus">
                             </div>
-                            <input type="number" name="quantity" id="quantityId${obj.id}" step="1" value="${quantityValue}">
+                            <input type="number" name="quantity" id="quantityId${obj.id}" step="1" value="${quantityValue}" onblur="quantityBlur('quantityId${obj.id}',${obj.id})">
                             <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease('quantityId${obj.id}',${obj.id})">
                                 <img src="../Images/icon/icon-plus.png" alt="plus">
                             </div>
@@ -155,12 +155,28 @@ function addToBasket(productID) {
     $(`.btn-product-${productID}`).removeClass('d-block');
     $(`.added-product-${productID}`).removeClass('d-none');
     $(`.added-product-${productID}`).addClass('d-block');
+    $(`.added-product-${productID} p`).text('Đã thêm vào giỏ hàng');
+    $(`.added-product-${productID}`).css('background-color','rgba(0,255,0,0.6)');
 
     // Cập nhật giỏ hàng trong sessionStorage
     var updatedBasketJson = JSON.stringify(basket);
     sessionStorage.setItem('basket', updatedBasketJson);
+
+    //hiện ra số sản phẩm trong giỏ hàng trên header
+    // $('.number-product-in-basket p').text(`${basket.length}`)
+    numInBasKet(basket)
 }
-  
+
+//Hàm hiện số sản phẩm trong giỏ hàng trên header
+function numInBasKet(basket){
+    if(basket.length >0){
+        $('.number-product-in-basket').addClass('d-block')
+        $('.number-product-in-basket p').text(`${basket.length}`)
+    }else{
+        $('.number-product-in-basket').removeClass('d-block')
+    }
+}
+numInBasKet(basket)
 
 //Hàm mở menu con
 function openSidebarMenu(){
@@ -224,11 +240,11 @@ function quantityIncrease(quantityId,productID) {
 function quantityDecrease(quantityId,productID){
     var quantityCurrent = $("#" + quantityId);
     var quantityValue = parseInt(quantityCurrent.val());
-    if(quantityValue>0){
+    if(quantityValue>1){
         quantityCurrent.val(quantityValue - 1);
         sessionStorage.setItem(quantityId, quantityValue -   1); // Lưu giá trị vào sessionStorage
     }else{
-        quantityCurent.value=0;
+        quantityCurent.value=1;
     }
 
     quantityValue = parseInt(quantityCurrent.val());
@@ -239,7 +255,27 @@ function quantityDecrease(quantityId,productID){
     
     printBill(basket)
 }
+function quantityBlur(quantityId,productID){
+    var quantityCurrent = $("#" + quantityId);
+    var quantityValue = parseInt(quantityCurrent.val());
 
+    if(quantityValue>0){
+        quantityCurrent.val(quantityValue);
+        sessionStorage.setItem(quantityId, quantityValue); // Lưu giá trị vào sessionStorage
+    }
+    else{
+        quantityCurrent.val(1);
+        sessionStorage.setItem(quantityId, 1);
+    }
+
+    // quantityValue = parseInt(quantityCurrent.val());
+    var pri=quantityValue*getProductById(productID).price;
+    console.log(price);
+    var lastPrice=price(pri);
+    $(`.item-price-${productID}`).text(lastPrice);
+    
+    printBill(basket)
+}
 
 
 //Các hàm di chuyển trang
@@ -293,5 +329,9 @@ function goToAboutUsRecruit(){
 
 function goToBasket(){
     window.location.href = './basket.html'
+}
+
+function goToPaymentPage(){
+    window.location.href = './payment.html'
 }
 
