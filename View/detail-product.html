@@ -16,8 +16,465 @@
     <header id="header">
         <script src="./header.js"></script>
     </header>
-    <section>
-        
+    <section id="link" class="m-0-auto">
+        <div class="link d-flex ">
+            <p>Trang chủ</p>
+            <div class="img-link w-9px">
+                <img src="../Images/icon/product-link.jpg" alt="img-link">
+            </div>
+            <p>Sản phẩm</p>
+            <div class="img-link w-9px">
+                <img src="../Images/icon/product-link.jpg" alt="img-link">
+            </div>
+            <p class="to-link font-w700">Bông tai Elean</p>
+        </div>
+    </section>
+    <section id="product" class="d-flex justify-content-between m-0-auto flex-wrap">
+        <div class="images d-flex w-60 justify-content-between">
+            <div class="list-img d-flex flex-column justify-content-between w-25">
+                <div class="img w-100">
+                    <img src="../Images/detail-product/đetail-product-img1.jpg" alt="image1" id="image1" onclick="toSpotLight(this.id)">
+                </div>
+                <div class="img w-100">
+                    <img src="../Images/detail-product/detail-product-img2.jpg" alt="image2" id="image2" onclick="toSpotLight(this.id)">
+                </div>
+                <div class="img w-100">
+                    <img src="../Images/detail-product/detail-product-img3.jpg" alt="image3" id="image3" onclick="toSpotLight(this.id)">
+                </div>
+                <div class="img w-100">
+                    <img src="../Images/detail-product/detail-product-img4.jpg" alt="image4" id="image4" onclick="toSpotLight(this.id)">
+                </div>
+            </div>
+            <div class="spotlight w-70">
+                <div class="img">
+                    <img src="../Images/detail-product/đetail-product-img1.jpg" alt="image-spotlight">
+                </div>
+            </div>
+        </div>
+        <div class="images-moblie w-100 d-none">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../Images/detail-product/đetail-product-img1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../Images/detail-product/detail-product-img2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../Images/detail-product/detail-product-img3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../Images/detail-product/detail-product-img4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="content w-37 d-flex flex-column justify-content-between">
+            <div>
+                <div class="product-name">
+                    <h2 class="font-w700">Bông tai Elean</h2>
+                </div>
+                <div class="frame-1 d-flex">
+                    <div class="rate d-flex align-items-center">
+                        <div class="star d-flex">
+                            <p>5.0</p>
+                            <div class="img w-16px">
+                                <img src="../Images/icon/star-yellow.png" alt="star-yellow">
+                            </div>
+                        </div>
+                        <div class="separate"></div>
+                        <div class="quantity-sold d-flex align-items-center">
+                            <p>10 Đã bán</p>
+                        </div>
+                    </div>
+                    <div class="product-condition">
+                        <p class="font-w700">Còn hàng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price">
+                <div class="original-price d-flex align-items-center">
+                    <p class="font-w600"> 500.000 đ</p>
+                    <div class="separate"></div>
+                    <div class="percent-discount">
+                        <p>-50%</p>
+                    </div>
+                </div>
+                <div class="current-price">
+                    <p class="font-w700">250.000 đ</p>
+                </div>
+            </div>
+            <div class="choose d-flex flex-column justify-content-between h-30">
+                <div class="choose-size d-flex align-items-center">
+                    <div class="div">
+                        <p>Kích thước:</p>
+                    </div>
+                    <div class="size d-flex">
+                        <!-- size của sản phẩm sẽ ở đây -->
+                        <div class="option position-relative">
+                            <input type="radio" name="size" id="size-16" class="absolute-center" checked>
+                            <p>16</p>
+                        </div>
+                        <div class="option position-relative">
+                            <input type="radio" name="size" id="size-17" class="absolute-center">
+                            <p>17</p>
+                        </div>
+                        <div class="option position-relative">
+                            <input type="radio" name="size" id="size-18" class="absolute-center">
+                            <p>18</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose-color d-flex align-items-center">
+                    <div class="div">
+                        <p>Màu sắc:</p>
+                    </div>
+                    <div class="color d-flex">
+                        <!-- Màu sắc của sản phẩm ở đây  -->
+                        <div class="option position-relative gold option-checked">
+                            <input type="radio" name="color" id="gold" class="absolute-center" onclick="chooseColor(this.id)" checked>
+                            <p style="background-color: gold;"></p>
+                        </div>
+                        <div class="option position-relative silver">
+                            <input type="radio" name="color" id="silver" class="absolute-center" onclick="chooseColor(this.id)">
+                            <p style="background-color: silver;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity d-flex align-items-center">
+                    <div class="div">
+                        <p>Số lượng: </p>
+                    </div>
+                    <div class="quantity-bar d-flex">
+                        <div class=" minus d-flex align-items-center" onclick="quantityDecrease('quantityId0',0)">
+                            <img src="../Images/icon/icon-minuss.jpg" alt="minus">
+                        </div>
+                        <input type="number" name="quantity" id="quantityId0" step="0" value="1" onblur="quantityBlur('quantityId0',0)">
+                        <div class="plus w-32px d-flex align-items-center" onclick="quantityIncrease('quantityId0',0)">
+                            <img src="../Images/icon/icon-plus.png" alt="plus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frame-button d-flex justify-content-between">
+                <div class="button btn-white">
+                    <p>Thêm vào giỏ hàng</p>
+                </div>
+                <div class="button btn-black">
+                    <p>Mua ngay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="detail" class="m-0-auto mt-120px">
+        <div class="head d-flex">
+            <div class="p d-flex justify-content-between position-relative">
+                <input type="radio" name="viewOnLapTop" id="description" class="absolute-center" onclick="openDetailLaptop(this.id)" checked>
+                <p class="head-description detail-checked">Mô tả</p>
+                <div class="img w-12px">
+                    <img src="../Images/icon/icon-mui-ten-sang.png" alt="icon">
+                </div>
+                <input type="checkbox" name="chk" id="openDescription" class="absolute-center" onclick="openDetailMobile(this.id)">
+                
+            </div>
+                <div class="description openDescription d-none">
+                    <div class="about-product">
+                        <p><span>Sản phẩm </span>: Bông tai Elean chuôi bạc 925 hình vuông sang chảnh.</p>
+                        <p>Màu sắc: Trắng, Vàng đồng (Quý khách vui lòng xem trên hình ảnh sản phẩm)</p>
+                        <p>Kích thước: Có 3 kích thước 16, 17, 18.</p>
+                        <p>Kích thước: Có 3 kích thước 16, 17, 18.</p>
+                        <p>Loại sản phẩm: Bông tai bạc 925</p>
+                    </div>
+                    <div class="features">
+                        <p>Các điểm nổi bật:</p>
+                        <ul>
+                            <li>Nút cài sau chắc chắn, chống rơi</li>
+                            <li>Kĩ thuật mạ đều màu, khó phai</li>
+                            <li>Không bị đen hay gỉ sét</li>
+                            <li>Phù hợp mọi loại da</li>
+                        </ul>
+                    </div>
+                </div>
+            <div class="p d-flex justify-content-between position-relative">
+                <input type="radio" name="viewOnLapTop" id="warranty" class="absolute-center" onclick="openDetailLaptop(this.id)">
+                <p class="head-warranty">Bảo hành và Hoàn trả</p>
+                <div class="img w-12px">
+                    <img src="../Images/icon/icon-mui-ten-sang.png" alt="icon">
+                </div>
+                <input type="checkbox" name="chk" id="openWarranty" class="absolute-center" onclick="openDetailMobile(this.id)">
+            </div>
+                <div class="warranty openWarranty d-none">
+                    <div class="d-flex flex-wrap">
+                        <div class="col1">
+                            <p class="font-w700">Chính sách bảo hành:</p>
+                            <p>(Áp dụng cho vàng 18k)</p>
+                        </div>
+                        <div class="table">
+                            <div class="t-head ">
+                                <div class="t-col">
+                                    <p>Nội dung</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>Thời gian</p>
+                                </div>
+                            </div>
+                            <div class="Row">
+                                <div class="t-col">
+                                    <p>Làm sạch sản phẩm</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>Trọn đời</p>
+                                </div>
+                            </div>
+                            <div class="Row">
+                                <div class="t-col">
+                                    <p>Đánh bóng và xì mới</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>05 lần</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap">
+                        <div class="col1">
+                            <p class="font-w700">Phí bảo hành:</p>
+                        </div>
+                        <div class="table">
+                            <div class="t-head">
+                                <div class="t-col">
+                                    <p>Nội dung bảo hành</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>Chi phí bảo hành (/lần)</p>
+                                </div>
+                            </div>
+                            <div class="Row">
+                                <div class="t-col">
+                                    <p>Sửa độ rung với sản phẩm Ladanse</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>200.000đ</p>
+                                </div>
+                            </div>
+                            <div class="Row">
+                                <div class="t-col">
+                                    <p>Làm mới sản phẩm</p>
+                                </div>
+                                <div class="t-col">
+                                    <p>50.000đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attention"> 
+                        <p class="font-w700">Lưu ý:</p>
+                        <p>Sản pẩm không còn nguyên vẹn hoặc mất hóa đơn, Miki sẽ thâu mua lại với 80% giá trị sản phẩm.</p>
+                        <p>Các sản pẩm trang sức bạc, mạ vàng, vòng đá, dây da các loại, chuỗi ngọc trai: Miki không mua lại</p>
+                    </div>
+                </div>
+            <div class="p d-flex justify-content-between position-relative">
+                <input type="radio" name="viewOnLapTop" id="transport" class="absolute-center" onclick="openDetailLaptop(this.id)">
+                <p class="head-transport">Vận chuyển</p>
+                <div class="img w-12px">
+                    <img src="../Images/icon/icon-mui-ten-sang.png" alt="icon">
+                </div>
+                <input type="checkbox" name="chk" id="openTransport" class="absolute-center" onclick="openDetailMobile(this.id)">
+            </div>
+                <div class="transport openTransport d-none">
+                    <p class="font-w700">Chính sách vận chuyển</p>
+                    <p>Với đối tác giao hàng uy tín, có mua bảo hiểm hàng hóa, thời gian giao hàng nhanh và đúng hẹn:</p>
+                    <div class="table">
+                        <div class="t-head">
+                            <div class="t-col">
+                                <p>Khu vực</p>
+                            </div>
+                            <div class="t-col">
+                                <p>Nội thành Hà Nội/TP Hồ Chí Minh</p>
+                            </div>
+                            <div class="t-col">
+                                <p>Các tỉnh thành khác</p>
+                            </div>
+                        </div>
+                        <div class="t-row">
+                            <div class="t-col">
+                                <p>Thời gian giao hàng</p>
+                            </div>
+                            <div class="t-col">
+                                <p>2 ngày</p>
+                            </div>
+                            <div class="t-col">
+                                <p>3-5 ngày</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attention">
+                        <p class="font-w700" style="color: #D2311B;">**** Chú ý:</p>
+                        <p>Với sản phẩm giảm giá khuyến mãi từ 20% trở lên khách hàng sẽ chịu hoàn toàn phí giao hàng.</p>
+                    </div>
+                </div>
+            <div class="p d-flex justify-content-between">
+                <p>Đánh giá</p>
+                <div class="img w-12px">
+                    <img src="../Images/icon/icon-mui-ten-sang.png" alt="icon">
+                </div>
+            </div>
+            
+        </div>
+        <div class="body">
+            <div class="description view">
+                <div class="about-product">
+                    <p><span>Sản phẩm </span>: Bông tai Elean chuôi bạc 925 hình vuông sang chảnh.</p>
+                    <p>Màu sắc: Trắng, Vàng đồng (Quý khách vui lòng xem trên hình ảnh sản phẩm)</p>
+                    <p>Kích thước: Có 3 kích thước 16, 17, 18.</p>
+                    <p>Kích thước: Có 3 kích thước 16, 17, 18.</p>
+                    <p>Loại sản phẩm: Bông tai bạc 925</p>
+                </div>
+                <div class="features">
+                    <p>Các điểm nổi bật:</p>
+                    <ul>
+                        <li>Nút cài sau chắc chắn, chống rơi</li>
+                        <li>Kĩ thuật mạ đều màu, khó phai</li>
+                        <li>Không bị đen hay gỉ sét</li>
+                        <li>Phù hợp mọi loại da</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="warranty view d-none">
+                <div class="d-flex">
+                    <div class="col1">
+                        <p class="font-w700">Chính sách bảo hành:</p>
+                        <p>(Áp dụng cho vàng 18k)</p>
+                    </div>
+                    <div class="table">
+                        <div class="t-head">
+                            <div class="t-col">
+                                <p>Nội dung</p>
+                            </div>
+                            <div class="t-col">
+                                <p>Thời gian</p>
+                            </div>
+                        </div>
+                        <div class="Row">
+                            <div class="t-col">
+                                <p>Làm sạch sản phẩm</p>
+                            </div>
+                            <div class="t-col">
+                                <p>Trọn đời</p>
+                            </div>
+                        </div>
+                        <div class="Row">
+                            <div class="t-col">
+                                <p>Đánh bóng và xì mới</p>
+                            </div>
+                            <div class="t-col">
+                                <p>05 lần</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="col1">
+                        <p class="font-w700">Phí bảo hành:</p>
+                    </div>
+                    <div class="table">
+                        <div class="t-head">
+                            <div class="t-col">
+                                <p>Nội dung bảo hành</p>
+                            </div>
+                            <div class="t-col">
+                                <p>Chi phí bảo hành (/lần)</p>
+                            </div>
+                        </div>
+                        <div class="Row">
+                            <div class="t-col">
+                                <p>Sửa độ rung với sản phẩm Ladanse</p>
+                            </div>
+                            <div class="t-col">
+                                <p>200.000đ</p>
+                            </div>
+                        </div>
+                        <div class="Row">
+                            <div class="t-col">
+                                <p>Làm mới sản phẩm</p>
+                            </div>
+                            <div class="t-col">
+                                <p>50.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="attention"> 
+                    <p class="font-w700">Lưu ý:</p>
+                    <p>Sản pẩm không còn nguyên vẹn hoặc mất hóa đơn, Miki sẽ thâu mua lại với 80% giá trị sản phẩm.</p>
+                    <p>Các sản pẩm trang sức bạc, mạ vàng, vòng đá, dây da các loại, chuỗi ngọc trai: Miki không mua lại</p>
+                </div>
+            </div>
+            <div class="transport view d-none">
+                <p class="font-w700">Chính sách vận chuyển</p>
+                <p>Với đối tác giao hàng uy tín, có mua bảo hiểm hàng hóa, thời gian giao hàng nhanh và đúng hẹn:</p>
+                <div class="table">
+                    <div class="t-head">
+                        <div class="t-col">
+                            <p>Khu vực</p>
+                        </div>
+                        <div class="t-col">
+                            <p>Nội thành Hà Nội/TP Hồ Chí Minh</p>
+                        </div>
+                        <div class="t-col">
+                            <p>Các tỉnh thành khác</p>
+                        </div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col">
+                            <p>Thời gian giao hàng</p>
+                        </div>
+                        <div class="t-col">
+                            <p>2 ngày</p>
+                        </div>
+                        <div class="t-col">
+                            <p>3-5 ngày</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="attention">
+                    <p class="font-w700" style="color: #D2311B;">**** Chú ý:</p>
+                    <p>Với sản phẩm giảm giá khuyến mãi từ 20% trở lên khách hàng sẽ chịu hoàn toàn phí giao hàng.</p>
+                </div>
+            </div>
+        </div>
+        <div class="foot w-100 d-flex justify-content-center">
+            <div class="img w-65">
+                <img src="../Images/icon/about-us-icon-5.jpg" alt="foot">
+            </div>
+        </div>
+    </section>
+    <section id="viewedProducts" class="m-0-auto mt-120px">
+        <p class="font-w700" style="font-size: 1.5rem;">Sản phẩm đã xem</p>
+        <div class="viewed-products d-flex flex-wrap">
+
+        </div>
+    </section>
+    <section id="suggestProducts" class="m-0-auto mt-120px">
+        <p class="font-w700" style="font-size: 1.5rem;">Có thể bạn cũng thích</p>
+        <div class="suggest-products d-flex flex-wrap">
+
+        </div>
     </section>
     <footer id="footer">
         <script src="./footer.js"></script>

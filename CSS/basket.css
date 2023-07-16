@@ -2,7 +2,11 @@ body{
     background-color: #fff;
 }
 #footer{
-    padding-top: 120px;
+    padding-top: 60px;   
+    background-color: #fff9f6;
+    .footer{
+        margin-top: 0 !important;
+    }
 }
 #header{
     z-index: 1;

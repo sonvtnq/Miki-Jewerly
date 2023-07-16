@@ -14,9 +14,9 @@ header{
     background-color: #fff9f6 !important;
 }
 footer{
-    z-index: 3;
-    background-color: #fff9f6 !important;
-    position: relative;
+    z-index: 1;
+    /* background-color: #fff9f6 !important; */
+    position: static;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-top: 0;
@@ -76,11 +76,17 @@ img{
 .mt-120px{
     margin-top: 120px !important;
 }
+.h-16px{
+    height: 16px;
+}
 .w-80{
     width: 80%;
 }
 .w-70{
     width: 70%;
+}
+.w-42{
+    width: 42%;
 }
 .w-45{
     width:45%;
@@ -90,6 +96,9 @@ img{
 }
 .h-32px{
     height: 32px;
+}
+.h-30{
+    height: 30%;
 }
 .w-35{
     width: 35%;
@@ -112,6 +121,9 @@ img{
 .w-32{
     width: 32%;
 }
+.w-37{
+    width: 37%;
+}
 .w-16px{
     width: 16px;
 }
@@ -130,6 +142,9 @@ img{
 .h-40px{
     height: 40px !important;
 }
+.position-static{
+    position: static;
+}
 a{
     text-decoration: none;
     line-height: 1.5;
@@ -140,6 +155,14 @@ a{
 .header{
     height: 128px;
     width: 1136px;
+}
+.absolute-center{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .icon-basket{
     position: relative;

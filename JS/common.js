@@ -182,12 +182,12 @@ numInBasKet(basket)
 function openSidebarMenu(){
     $("#sidebarMenu").addClass("append");
     $('body').addClass('overflow-hide'); 
-    $('footer').addClass('opacity-0')   
+    $('footer').addClass('position-static')   
 }
 function closeSidebarMenu(){
     $("#sidebarMenu").removeClass("append");
     $('body').removeClass('overflow-hide');
-    $('footer').removeClass('opacity-0')  
+    $('footer').removeClass('position-static')  
 }
 
 //Hàm mở side bar menu - sản phẩm

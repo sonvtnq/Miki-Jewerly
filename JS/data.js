@@ -218,3 +218,6 @@ var listGiftCode=[
         value: 0.3,
     },
 ]
+
+var spotLightProduct=[1,17,18,19]
+var viewedProducts=[]
