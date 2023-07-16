@@ -5,6 +5,10 @@ var necklace=[19,25,26,27,28]
 var bracelet=[18,29,30]
 var watch=[31,32]
 var all=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
+var spotLightProduct=[1,17,18,19]
+
+//sản phẩm đã xem
+var viewedProducts=[]
 // Giỏ hàng lưu trong sessionStorage
 var basket = [];
 
@@ -60,7 +64,7 @@ function setProduct(obj){
                 <div class="img">
                     <img src="${obj.img}" alt="${obj.name}">
                     <div>
-                        <p>Xem chi tiết</p>
+                        <p onclick="goToDetailProduct(${obj.id})">Xem chi tiết</p>
                     </div>
                 </div>
                 <div class="detail">
@@ -166,6 +170,7 @@ function addToBasket(productID) {
     // $('.number-product-in-basket p').text(`${basket.length}`)
     numInBasKet(basket)
 }
+
 
 //Hàm hiện số sản phẩm trong giỏ hàng trên header
 function numInBasKet(basket){
@@ -333,5 +338,10 @@ function goToBasket(){
 
 function goToPaymentPage(){
     window.location.href = './payment.html'
+}
+
+function goToDetailProduct(ProductID){
+    sessionStorage.setItem('detail-product', ProductID);
+    window.location.href = './detail-product.html'
 }
 
