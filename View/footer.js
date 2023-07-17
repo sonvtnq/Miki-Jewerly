@@ -18,7 +18,7 @@ var footer=`<div class="footer m-0-auto mt-120px">
             <h2 class="font-size-h2 font-w700">Kết nối với chúng tôi tại</h2>
         </div>
         <div class="f-row text-end d-flex justify-content-end">
-            <div class="social-icon d-flex justify-content-between h-40px w-330px">
+            <div class="social-icon d-flex justify-content-between h-40px w-330px position-relative">
                 <a href="#" title="Facebook" class="icon-social h-100 d-block cursor-pointer">
                     <img src="../Images/icon/logo-facebook.png" alt="Facebook" class="h-100">
                 </a>

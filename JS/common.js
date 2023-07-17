@@ -92,7 +92,7 @@ function setProductInBasket(obj){
                 <div class="detail d-flex flex-column justify-content-between w-68">
                     <div class="position-relative">
                         <div class="name">
-                            <p class="font-w700">${obj.name}</p>
+                            <p class="font-w700" onclick="goToDetailProduct(${obj.id})">${obj.name}</p>
                         </div>
                         <div class="item-color">
                             <p>Màu sắc: Silver</p>

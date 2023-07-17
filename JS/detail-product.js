@@ -4,7 +4,9 @@ var product=getProductById(productID);
 
 $('.list-img .img1 img').attr('src', product.img);
 $('.spotlight .img img').attr('src', product.img);
+$('.carousel-item .img1').attr('src', product.img);
 $('.content .product-name h2').text(product.name)
+$('title').text(product.name)
 $('.to-link').text(product.name)
 $('.price .original-price > p').text(price(product.price*2))
 $('.price .current-price p').text(price(product.price))
