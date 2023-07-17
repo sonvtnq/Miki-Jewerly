@@ -9,6 +9,9 @@ function printCredit(ID){
   $('.creditCardSaved').addClass('d-none');
   $('.creditCard').addClass('d-none');
   $('.'+ID).removeClass('d-none');
+  if(!$('#'+ID).is(':checked')){
+    $('.'+ID).addClass('d-none');
+  }
 }
 
 function setProductInBill(obj){
