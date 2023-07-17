@@ -171,6 +171,32 @@ function addToBasket(productID) {
     numInBasKet(basket)
 }
 
+// Kiểm tra xem giỏ hàng đã tồn tại trong sessionStorage hay chưa
+if (sessionStorage.getItem('viewed-product')) {
+    var viewedJson=sessionStorage.getItem('viewed-product');
+    var viewedProducts=JSON.parse(viewedJson);
+} else {
+    // Nếu chưa tồn tại, tạo một giỏ hàng mới và lưu vào sessionStorage
+    var viewedJson = JSON.stringify(viewedProducts);
+    sessionStorage.setItem('viewed-product', viewedJson);
+}
+
+//thêm sản phẩm vào đã xem
+function addToViewedProduct(productID){
+    var viewedJson=sessionStorage.getItem('viewed-product');
+    var viewedProducts=JSON.parse(viewedJson);
+
+    //check trong mảng và xóa productID vừa xem nếu có ( tại đẩy nó lên đầu )
+    viewedProducts = viewedProducts.filter(function(value) {
+        return value !== productID; // Lọc ra những phần tử khác với số 'productID'
+    });
+
+    viewedProducts.unshift(productID);
+
+    var updatedViewedJson = JSON.stringify(viewedProducts);
+    sessionStorage.setItem('viewed-product', updatedViewedJson);
+}
+
 
 //Hàm hiện số sản phẩm trong giỏ hàng trên header
 function numInBasKet(basket){
@@ -341,6 +367,7 @@ function goToPaymentPage(){
 }
 
 function goToDetailProduct(ProductID){
+    addToViewedProduct(ProductID)
     sessionStorage.setItem('detail-product', ProductID);
     window.location.href = './detail-product.html'
 }

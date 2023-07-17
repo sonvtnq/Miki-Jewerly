@@ -22,39 +22,45 @@ function toSpotLight(ID) {
 }
 
 function setProduct(region , obj){
-  var display='d-block';
-  var addDisplay='d-none';
-  if(isInBasket(basket,obj.id)){
-      display = 'd-none'
-      addDisplay ='b-block'
-  }else{
-      display='d-block'
-      addDisplay='d-none'
-  }
-  var view=`<div class="item-product">
-              <div class="img">
-                  <img src="${obj.img}" alt="${obj.name}">
-                  <div>
-                      <p>Xem chi tiết</p>
-                  </div>
-              </div>
-              <div class="detail">
-                  <p class="font-w700">${obj.name}</p>
-                  <p style="color: #92715A;" class="font-w700">${price(obj.price)}</p>
-                  <div class="btn-product-${obj.id} button btn-black w-100 ${display} " onclick="addToBasket(${obj.id})">
-                      <p>Thêm vào giỏ hàng </p>
-                  </div>
-                  <div class="button w-100 cursor-default added added-product-${obj.id} ${addDisplay}">
-                      <p>Đã trong giỏ hàng</p>
-                  </div>
-              </div>
-          </div>`
-  $('.'+region).append(view);
+    var display='d-block';
+    var addDisplay='d-none';
+    if(isInBasket(basket,obj.id)){
+        display = 'd-none'
+        addDisplay ='b-block'
+    }else{
+        display='d-block'
+        addDisplay='d-none'
+    }
+    var view=`<div class="item-product">
+                <div class="img">
+                    <img src="${obj.img}" alt="${obj.name}">
+                    <div>
+                        <p onclick="goToDetailProduct(${obj.id})">Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <p class="font-w700">${obj.name}</p>
+                    <p style="color: #92715A;" class="font-w700">${price(obj.price)}</p>
+                    <div class="btn-product-${obj.id} button btn-black w-100 ${display} " onclick="addToBasket(${obj.id})">
+                        <p>Thêm vào giỏ hàng </p>
+                    </div>
+                    <div class="button w-100 cursor-default added added-product-${obj.id} ${addDisplay}">
+                        <p>Đã trong giỏ hàng</p>
+                    </div>
+                </div>
+            </div>`
+    $('.'+region).append(view);
 }
 
 
-for(i=0;i<spotLightProduct.length;i++){
+for(var i=0;i<spotLightProduct.length;i++){
   setProduct('suggest-products',getProductById(spotLightProduct[i]))
+  if(i<viewedProducts.length){
+    setProduct('viewed-products',getProductById(viewedProducts[i]))
+  }else{
+    continue;
+  }
+  
 }
 
 function openDetailMobile(ID){
@@ -74,4 +80,10 @@ function openDetailLaptop(ID){
         $('#detail .body .'+ID).removeClass('d-none');
         $('#detail .head .head-'+ID).addClass('detail-checked');
     }
+}
+
+if(viewedProducts.length==0){
+    $('#viewedProducts').addClass('d-none');
+}else{
+    $('#viewedProducts').removeClass('d-none');
 }

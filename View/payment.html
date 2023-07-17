@@ -54,13 +54,13 @@
                         </div>
                         <div class="table-payment">
                             <div class="cash d-flex align-items-center">
-                                <input type="checkbox" name="paymentMethod" id="cash" onclick="printCredit()">
+                                <input type="checkbox" name="paymentMethod" id="cash" onclick="printCredit(this.id)">
                                 <p>Tiền mặt</p>
                             </div>
                             <div class="credit-card-saved d-flex justify-content-between flex-wrap">
                                 <div class="w-100 d-flex justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <input type="checkbox" name="paymentMethod" id="creditCardSaved" onclick="printCredit()">
+                                        <input type="checkbox" name="paymentMethod" id="creditCardSaved" onclick="printCredit(this.id)">
                                         <p>Thẻ đã lưu</p>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -79,7 +79,7 @@
                             <div class="credit-card d-flex justify-content-between flex-wrap">
                                 <div class="w-100 d-flex justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <input type="checkbox" name="paymentMethod" id="creditCard" onclick="printCredit()">
+                                        <input type="checkbox" name="paymentMethod" id="creditCard" onclick="printCredit(this.id)">
                                         <p>Thẻ tín dụng hoặc thẻ ghi nợ</p>
                                     </div>
                                     <div class="img-credit-card d-flex">
@@ -109,30 +109,6 @@
                     <div class="w-85">
                         <div class="product">
                             <!-- sản phẩm  -->
-                            <!-- <div class="product-${obj.id} item-product d-flex justify-content-between w-100">
-                                <div class="img position-relative">
-                                    <img src="../Images/Products/Lira Earrings.png" alt="${obj.name}">  
-                                </div>
-                                <div class="product-detail d-flex justify-content-between w-80 ">
-                                    <div class="position-relative h-100">
-                                        <div class="name">
-                                            <p class="font-w700">LiraEaring</p>
-                                        </div>
-                                        <div class="item-color">
-                                            <p>Màu sắc: Silver</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <div class="price-item">
-                                            <p class="item-price-${obj.id} item-price font-w700">355.000đ</p>
-                                        </div>
-                                        <div class="quantity-bar d-flex">
-                                            <p class="font-w700">SL: 1</p>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div> -->
                         </div>
                         <div class="bill">
                             <div class="bill-row d-flex justify-content-between">

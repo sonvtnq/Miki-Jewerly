@@ -37,6 +37,15 @@ function checkGiftCode(){
     return false;
 }
 
+//hàm xóa giftCode
+function removeGift(){
+    giftPrice=0
+    sessionStorage.setItem('gift-code', '');
+    $('.bill-temporary-detail .gift').removeClass('gift-disabled')
+    $('.bill-temporary-detail .gift input').val("")
+    printBill(basket);
+}
+
 //Hàm in giftcode
 var giftPrice=0;
 var shipPrice=30000;
@@ -46,7 +55,9 @@ function printGiftCode(){
         if(giftCode==listGiftCode[i].id){
             giftPrice= listGiftCode[i].value;
             $('.alert-gift').removeClass('d-block')
-            $('.gift-label').text(`${listGiftCode[i].id}`)
+            $('.gift-label >p').text(`${listGiftCode[i].id}`)
+            $('.bill-temporary-detail .gift').addClass('gift-disabled')
+            $('.bill-temporary-detail .gift input').val("Chỉ dùng được 1 ưu đãi")
             return;
         }
     }

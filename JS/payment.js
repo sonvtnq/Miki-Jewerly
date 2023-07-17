@@ -5,21 +5,10 @@ $(document).ready(function() {
     });
   });
 
-function printCredit(){
-  if($('input[id="creditCardSaved"]').is(':checked')){
-    $('.creditCardSaved').removeClass('d-none');
-  }else{
-    $('.creditCardSaved').addClass('d-none');
-  }
-  if($('input[id="creditCard"]').is(':checked')){
-    $('.creditCard').removeClass('d-none');
-  }else{
-    $('.creditCard').addClass('d-none');
-  }
-  if($('input[id="cash"]').is(':checked')){
-    $('.creditCard').addClass('d-none');
-    $('.creditCardSaved').addClass('d-none');
-  }
+function printCredit(ID){
+  $('.creditCardSaved').addClass('d-none');
+  $('.creditCard').addClass('d-none');
+  $('.'+ID).removeClass('d-none');
 }
 
 function setProductInBill(obj){

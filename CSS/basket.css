@@ -76,12 +76,30 @@ section{
                     >.gift-label{
                         background-color: #fff9f6;
                         padding: .5rem 1rem;
+                        padding-right: .5rem;
                         position: absolute;
                         display: block;
                         left: 5rem;
                         top: 50%;
                         transform: translateY(-50%);
                         box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2)!important;
+                        >p{
+                            padding-right: 1rem;
+                        }
+                        .remove-gift{
+                            cursor: pointer;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            margin-bottom: 0;
+                            background-color: rgba(0,0,0,0.1);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            >img{
+                                width: 80%;
+                            }
+                        }
                     }
                 }
                 .price{
@@ -101,6 +119,14 @@ section{
 .d-block{
     display: block !important;
 }
+.gift-disabled{
+    & input{
+        /* background-color: rgba(0, 0, 0, 0.1) !important; */
+        background-color: #fff9f6 !important;
+        pointer-events: none !important;
+        color: rgba(0,0,0,0.5);
+    }
+}
 @media only screen and (max-width: 991.98px){
     section{
         .gift input{
@@ -109,6 +135,11 @@ section{
         .gift{
             .alert-gift{
                 left: 25% !important;
+            }
+        }
+        .content{
+            .bill-temporary{
+                width: 45%;
             }
         }
         
