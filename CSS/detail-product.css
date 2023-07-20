@@ -207,6 +207,11 @@
                     padding-top: .5rem;
                 }
             }
+            .added{
+                background-color: rgba(0,0,0,0.1);
+                color: black;
+                pointer-events: none;
+            }
         }
     }
 }

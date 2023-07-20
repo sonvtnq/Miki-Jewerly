@@ -2,6 +2,18 @@
 var productID = sessionStorage.getItem('detail-product');
 var product=getProductById(productID);
 
+function addThisProductTobasket(){
+    addToBasket(product.id);
+    $('#product .frame-button .add').addClass('d-none');
+    $('#product .frame-button .added').removeClass('d-none');
+    $('#product .frame-button .added p').text('Đã thêm vào giỏ hàng');
+}
+
+if (isInBasket(basket, product.id)) {
+    $('#product .frame-button .add').addClass('d-none');
+    $('#product .frame-button .added').removeClass('d-none');
+}
+
 $('.list-img .img1 img').attr('src', product.img);
 $('.spotlight .img img').attr('src', product.img);
 $('.carousel-item .img1').attr('src', product.img);
@@ -56,8 +68,10 @@ function setProduct(region , obj){
 
 
 for(var i=0;i<spotLightProduct.length;i++){
-  setProduct('suggest-products',getProductById(spotLightProduct[i]))
-  if(i<viewedProducts.length){
+    if(spotLightProduct[i]!=product.id){
+        setProduct('suggest-products',getProductById(spotLightProduct[i]))
+    }
+  if(i<viewedProducts.length && viewedProducts[i]!=product.id){
     setProduct('viewed-products',getProductById(viewedProducts[i]))
   }else{
     continue;
@@ -83,6 +97,7 @@ function openDetailLaptop(ID){
         $('#detail .head .head-'+ID).addClass('detail-checked');
     }
 }
+
 
 if(viewedProducts.length==0){
     $('#viewedProducts').addClass('d-none');
